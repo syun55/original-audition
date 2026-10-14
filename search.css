@@ -1,0 +1,659 @@
+@charset "UTF-8";
+
+/* 基本設定 */
+.search-page {
+  margin: 0;
+  background: #fff;
+  color: #333;
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+  line-height: 1.8;
+}
+
+.search-page *,
+.search-page *::before,
+.search-page *::after {
+  box-sizing: border-box;
+}
+
+.search-page [hidden] {
+  display: none !important;
+}
+
+.search-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.search-page button,
+.search-page input,
+.search-page select {
+  font: inherit;
+}
+
+.search-page button,
+.search-page summary {
+  cursor: pointer;
+}
+
+.search-page h1,
+.search-page h2,
+.search-page h3,
+.search-page p {
+  margin-top: 0;
+}
+
+.search-page ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.search-page a:focus-visible,
+.search-page button:focus-visible,
+.search-page input:focus-visible,
+.search-page select:focus-visible,
+.search-page summary:focus-visible {
+  outline: 2px solid #7b42ba;
+  outline-offset: 4px;
+}
+
+.ag-wrap {
+  width: 90%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.ag-skip {
+  position: absolute;
+  top: -80px;
+  left: 16px;
+  z-index: 20;
+  padding: 12px;
+  background: #fff;
+}
+
+.ag-skip:focus {
+  top: 10px;
+}
+
+/* ヘッダー */
+.ag-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 92%;
+  min-height: 112px;
+  margin-inline: auto;
+}
+
+.search-page .ag-logo {
+  color: #7b42ba;
+  font-size: 30px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.ag-logo small {
+  display: block;
+  color: #777;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+}
+
+.ag-navigation {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ag-navigation a:hover,
+.ag-navigation a[aria-current="page"] {
+  color: #7b42ba;
+}
+
+.ag-menu-button {
+  display: none;
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid #ded5e7;
+  border-radius: 5px;
+  background: #fff;
+  color: #333;
+}
+
+.search-page .ag-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 22px;
+  border: 0;
+  border-radius: 6px;
+  background: #7b42ba;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.search-page .ag-button:hover {
+  background: #63349a;
+  color: #fff;
+}
+
+/* パンくず */
+.ag-breadcrumb {
+  padding-block: 18px;
+  color: #777;
+  font-size: 11px;
+}
+
+.ag-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* ページタイトル */
+.ag-hero {
+  padding: 52px 0;
+  border-block: 1px solid #eee5f5;
+  background: #f6f2fa;
+}
+
+.ag-eyebrow {
+  margin-bottom: 8px;
+  color: #7b42ba;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.ag-hero h1 {
+  margin-bottom: 18px;
+  font-size: clamp(28px, 3vw, 38px);
+  letter-spacing: 0.04em;
+}
+
+.ag-lead {
+  margin-bottom: 12px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.ag-description {
+  margin-bottom: 0;
+  color: #666;
+  font-size: 13px;
+}
+
+/* 検索フォーム */
+.ag-search-form {
+  margin-top: 40px;
+  padding: 28px;
+  border: 1px solid #e5e1e9;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.ag-search-form fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.ag-search-form legend {
+  margin-bottom: 18px;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.ag-search-fields {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 220px auto;
+  align-items: end;
+  gap: 16px;
+}
+
+.ag-search-fields label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ag-search-fields input,
+.ag-search-fields select {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: 1px solid #dcd5e3;
+  border-radius: 5px;
+  background: #fff;
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.ag-reset {
+  display: block;
+  margin: 12px 0 0 auto;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: #777;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ジャンル別リンク */
+.ag-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.ag-jump a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 20px;
+  border: 1px solid #e5ddec;
+  border-radius: 24px;
+  color: #666;
+  font-size: 12px;
+}
+
+.ag-jump a:hover {
+  border-color: #7b42ba;
+  background: #f6f2fa;
+  color: #7b42ba;
+}
+
+.ag-result-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 24px;
+  margin-top: 28px;
+}
+
+.ag-result-info p {
+  margin: 0;
+  color: #777;
+  font-size: 12px;
+}
+
+.ag-result-info .ag-notice {
+  font-size: 11px;
+}
+
+/* ジャンル別一覧 */
+.ag-section {
+  margin-top: 48px;
+  scroll-margin-top: 24px;
+}
+
+.ag-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.ag-section-heading h2 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.ag-section-count {
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: #f4eef9;
+  color: #7b42ba;
+  font-size: 12px;
+}
+
+.ag-section-description {
+  margin: 12px 0 22px;
+  color: #777;
+  font-size: 13px;
+}
+
+.ag-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 24px;
+}
+
+/* 事務所カード */
+.ag-card {
+  min-width: 0;
+  padding: 26px;
+  border: 1px solid #e5e1e9;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.ag-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.ag-card-heading > div {
+  min-width: 0;
+}
+
+.ag-avatar {
+  display: flex;
+  flex: 0 0 76px;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.ag-tone-blue {
+  background: #e8eff7;
+  color: #4c6d91;
+}
+
+.ag-tone-pink {
+  background: #f7e9ee;
+  color: #97657a;
+}
+
+.ag-tone-purple {
+  background: #eee6f6;
+  color: #78529b;
+}
+
+.ag-tone-green {
+  background: #e7f1ed;
+  color: #4c7a68;
+}
+
+.ag-platform {
+  margin-bottom: 4px;
+  color: #7b42ba;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.ag-card h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.ag-area {
+  margin-bottom: 0;
+  color: #888;
+  font-size: 11px;
+}
+
+.ag-card-description {
+  margin: 20px 0 16px;
+  color: #666;
+  font-size: 13px;
+}
+
+.ag-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ag-tags li {
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: #f7f6f9;
+  color: #777;
+  font-size: 10px;
+}
+
+.ag-card details {
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid #eee;
+}
+
+.ag-card summary {
+  padding: 6px 0;
+  color: #7b42ba;
+  font-size: 12px;
+}
+
+.ag-card details p {
+  margin: 14px 0 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* 検索結果なし */
+.ag-empty {
+  margin-top: 40px;
+  padding: 40px 24px;
+  border: 1px solid #e5e1e9;
+  border-radius: 8px;
+  background: #faf9fc;
+  text-align: center;
+}
+
+.ag-empty h2 {
+  font-size: 18px;
+}
+
+.ag-empty p {
+  color: #777;
+  font-size: 13px;
+}
+
+/* Blogへの案内 */
+.ag-guide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 64px;
+  padding: 32px;
+  border: 1px solid #ebe4f1;
+  border-radius: 8px;
+  background: #faf8fc;
+}
+
+.ag-guide h2 {
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+
+.ag-guide div > p:last-child {
+  margin-bottom: 0;
+  color: #777;
+  font-size: 12px;
+}
+
+/* 共通フッターをsearch-pageにも適用 */
+.search-page .site-footer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 0;
+  padding: 40px 5% 24px;
+  border-top: 1px solid #e5e1e9;
+  background: #fff;
+  color: #333;
+  line-height: 1.7;
+}
+
+.search-page .site-footer .site-footer__note {
+  margin: 0 0 12px;
+  color: #777;
+  font-size: 10px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.search-page .site-footer .site-footer__copyright {
+  margin: 0;
+  color: #777;
+  font-size: 10px;
+  text-align: center;
+}
+
+.search-page .site-footer__copyright small {
+  font-size: inherit;
+}
+
+/* タブレット */
+@media (max-width: 1024px) {
+  .ag-header-inner {
+    flex-wrap: wrap;
+    min-height: 94px;
+    padding-block: 20px;
+  }
+
+  .ag-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ag-navigation {
+    flex-wrap: wrap;
+    gap: 18px;
+    width: 100%;
+  }
+
+  .search-page.ag-enhanced .ag-navigation {
+    display: none;
+  }
+
+  .search-page.ag-enhanced .ag-navigation.is-active {
+    display: flex;
+  }
+
+  .ag-search-fields {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .ag-keyword-label {
+    grid-column: 1 / -1;
+  }
+
+  .ag-guide {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+  .search-page .ag-logo {
+    font-size: 24px;
+  }
+
+  .ag-navigation {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ag-navigation a {
+    padding: 8px;
+  }
+
+  .ag-hero {
+    padding: 36px 0;
+  }
+
+  .ag-lead {
+    font-size: 15px;
+  }
+
+  .ag-search-form {
+    margin-top: 28px;
+    padding: 20px;
+  }
+
+  .ag-search-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .ag-jump {
+    gap: 8px;
+  }
+
+  .ag-jump a {
+    padding: 8px 14px;
+    font-size: 11px;
+  }
+
+  .ag-section {
+    margin-top: 36px;
+  }
+
+  .ag-section-heading h2 {
+    font-size: 21px;
+  }
+
+  .ag-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .ag-card {
+    padding: 20px;
+  }
+
+  .ag-card-heading {
+    gap: 14px;
+  }
+
+  .ag-avatar {
+    flex-basis: 60px;
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .ag-card h3 {
+    font-size: 16px;
+  }
+
+  .ag-guide {
+    margin-top: 44px;
+    padding: 24px;
+  }
+
+  .ag-guide h2 {
+    font-size: 17px;
+  }
+
+  .ag-guide .ag-button {
+    width: 100%;
+  }
+
+  .search-page .site-footer {
+    margin-top: 60px;
+    padding: 28px 0 24px;
+  }
+}

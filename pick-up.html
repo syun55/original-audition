@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PICK UP｜STAGE NOTE</title>
+    <meta name="description" content="はじめての挑戦を応援するSTAGE NOTEの注目オーディション。音楽、モデル、声優など、自分に合う募集を探せます。">
+
+    <link rel="stylesheet" href="category.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="pick-up.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="js/pick-up.js" defer></script>
+</head>
+
+<body class="pickup-page">
+    <a class="pu-skip" href="#main-content">
+        メインコンテンツへ
+    </a>
+
+    <header class="pu-header">
+        <div class="pu-header__inner">
+            <a class="pu-logo" href="index.html">
+                STAGE NOTE
+                <span>はじめての挑戦を、ここから。</span>
+            </a>
+
+            <button class="pu-menu-button" type="button" aria-controls="main-menu" aria-expanded="false"
+                aria-label="メニューを開く" hidden>
+                ☰
+            </button>
+
+            <nav class="pu-menu" id="main-menu" aria-label="メインナビゲーション">
+                <a href="audition.html">オーディション一覧</a>
+                <a href="blog.html">お役立ちBlog</a>
+                <a href="search.html">事務所を探す</a>
+                <a href="index.html#first-guide">初めての方へ</a>
+                <a class="pu-menu__cta" href="audition.html">
+                    自分に合う募集を探す →
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- index・auditionと共通のカテゴリー -->
+    <nav class="site-category" aria-label="オーディションカテゴリー">
+        <p class="site-category__label">カテゴリ：</p>
+
+        <div class="site-category__scroll">
+            <ul class="site-category__list">
+                <li>
+                    <a href="audition.html?category=idol">
+                        アイドル<small>idol</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="audition.html?category=model">
+                        モデル<small>model</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="audition.html?category=vtuber">
+                        VTuber/VLiver<small>vtuber</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="audition.html?category=liver">
+                        ライバー<small>liver</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="audition.html?category=voice">
+                        声優<small>voice</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="audition.html?category=actor">
+                        俳優・女優<small>actor</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="audition.html?category=movie">
+                        映画・舞台<small>movie</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="audition.html?category=influencer">
+                        インフルエンサー<small>influencer</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="audition.html?category=talents">
+                        タレント<small>talents</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="audition.html?category=music">
+                        音楽<small>music</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="audition.html?category=work">
+                        案件<small>work</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="audition.html?category=media">
+                        メディア<small>media</small>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="main-content" class="pu-main">
+        <nav class="pu-breadcrumb" aria-label="パンくずリスト">
+            <ol>
+                <li><a href="index.html">ホーム</a></li>
+                <li aria-current="page">PICK UP</li>
+            </ol>
+        </nav>
+
+        <section class="pu-intro" aria-labelledby="pickup-title">
+            <p class="pu-eyebrow">FIND YOUR NEXT STAGE</p>
+            <h1 id="pickup-title">
+                PICK UP
+                <span>注目のオーディション</span>
+            </h1>
+            <p class="pu-intro__text">
+                「やってみたい」が、はじまりの合図。<br>
+                あなたの次の一歩につながる募集を集めました。
+            </p>
+        </section>
+
+        <section class="pu-list-section" aria-labelledby="list-title">
+            <div class="pu-section-heading">
+                <div>
+                    <p class="pu-eyebrow">RECOMMENDED</p>
+                    <h2 id="list-title">気になる募集を見つけよう</h2>
+                </div>
+
+                <p class="pu-count" id="pickup-count" role="status">
+                    6件の募集
+                </p>
+            </div>
+
+            <!-- JavaScriptが読み込まれた場合に表示 -->
+            <div class="pu-filters" role="group" aria-label="注目の募集をカテゴリーで絞り込む" hidden>
+                <button type="button" data-filter="all" aria-pressed="true">
+                    すべて
+                </button>
+                <button type="button" data-filter="music" aria-pressed="false">
+                    音楽
+                </button>
+                <button type="button" data-filter="model" aria-pressed="false">
+                    モデル
+                </button>
+                <button type="button" data-filter="voice" aria-pressed="false">
+                    声優
+                </button>
+                <button type="button" data-filter="idol" aria-pressed="false">
+                    アイドル
+                </button>
+                <button type="button" data-filter="actor" aria-pressed="false">
+                    俳優・女優
+                </button>
+                <button type="button" data-filter="vtuber" aria-pressed="false">
+                    VTuber
+                </button>
+            </div>
+
+            <div class="pu-grid">
+                <!-- 新人ボーカル -->
+                <article class="pu-card" data-category="music">
+                    <a class="pu-card__link" href="application.html?id=vocal">
+                        <div class="pu-card__visual pu-visual--music">
+                            <span class="pu-card__badge">PICK UP</span>
+                            <div class="pu-card__visual-text">
+                                <img src="img/新人ボーカル.png" alt="新人ボーカル">
+                            </div>
+                        </div>
+
+                        <div class="pu-card__body">
+                            <div class="pu-card__tags">
+                                <span class="pu-tag">音楽</span>
+                                <span class="pu-tag pu-tag--beginner">未経験可</span>
+                            </div>
+
+                            <h3>新人ボーカルオーディション</h3>
+                            <p class="pu-card__description">
+                                歌うことが好き。その気持ちを、最初のステージへ。
+                                自分の声で表現したい方を募集します。
+                            </p>
+
+                            <dl class="pu-card__meta">
+                                <div>
+                                    <dt>活動エリア</dt>
+                                    <dd>全国・オンライン</dd>
+                                </div>
+                                <div>
+                                    <dt>締切</dt>
+                                    <dd><time datetime="2026-11-30">2026.11.30</time></dd>
+                                </div>
+                            </dl>
+
+                            <span class="pu-card__more">詳細を見る →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 新人モデル -->
+                <article class="pu-card" data-category="model">
+                    <a class="pu-card__link" href="application.html?id=model">
+                        <div class="pu-card__visual pu-visual--model">
+                            <span class="pu-card__badge">PICK UP</span>
+                            <div class="pu-card__visual-text">
+                                <img src="img/新人モデル.png" alt="新人モデル">
+                            </div>
+                        </div>
+
+                        <div class="pu-card__body">
+                            <div class="pu-card__tags">
+                                <span class="pu-tag">モデル</span>
+                                <span class="pu-tag pu-tag--beginner">未経験可</span>
+                            </div>
+
+                            <h3>福岡発・新人モデルオーディション</h3>
+                            <p class="pu-card__description">
+                                自分らしい表情や個性を活かしたい方へ。
+                                初めての撮影やウォーキングに挑戦できる募集です。
+                            </p>
+
+                            <dl class="pu-card__meta">
+                                <div>
+                                    <dt>活動エリア</dt>
+                                    <dd>福岡</dd>
+                                </div>
+                                <div>
+                                    <dt>締切</dt>
+                                    <dd><time datetime="2026-12-15">2026.12.15</time></dd>
+                                </div>
+                            </dl>
+
+                            <span class="pu-card__more">詳細を見る →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 朗読 -->
+                <article class="pu-card" data-category="voice">
+                    <a class="pu-card__link" href="application.html?id=reading">
+                        <div class="pu-card__visual pu-visual--voice">
+                            <span class="pu-card__badge">PICK UP</span>
+                            <div class="pu-card__visual-text">
+                                <img src="img/朗読プロジェクト.png" alt="朗読プロジェクト">
+                            </div>
+                        </div>
+
+                        <div class="pu-card__body">
+                            <div class="pu-card__tags">
+                                <span class="pu-tag">声優</span>
+                                <span class="pu-tag pu-tag--beginner">未経験可</span>
+                            </div>
+
+                            <h3>朗読プロジェクト・キャスト募集</h3>
+                            <p class="pu-card__description">
+                                物語を読むこと、声で伝えることが好きな方へ。
+                                あなたの声で作品の世界を届けてみませんか。
+                            </p>
+
+                            <dl class="pu-card__meta">
+                                <div>
+                                    <dt>活動エリア</dt>
+                                    <dd>全国・オンライン</dd>
+                                </div>
+                                <div>
+                                    <dt>締切</dt>
+                                    <dd><time datetime="2026-12-20">2026.12.20</time></dd>
+                                </div>
+                            </dl>
+
+                            <span class="pu-card__more">詳細を見る →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- アイドル -->
+                <article class="pu-card" data-category="idol">
+                    <a class="pu-card__link" href="application.html?id=idol">
+                        <div class="pu-card__visual pu-visual--idol">
+                            <span class="pu-card__badge">PICK UP</span>
+                            <div class="pu-card__visual-text">
+                                <img src="img/新しいユニット.png" alt="新しいユニット">
+                            </div>
+                        </div>
+
+                        <div class="pu-card__body">
+                            <div class="pu-card__tags">
+                                <span class="pu-tag">アイドル</span>
+                                <span class="pu-tag pu-tag--beginner">未経験可</span>
+                            </div>
+
+                            <h3>新しいユニットのメンバー募集</h3>
+                            <p class="pu-card__description">
+                                歌やダンスを通して、自分を表現したい方へ。
+                                仲間と一緒に、新しいステージを目指します。
+                            </p>
+
+                            <dl class="pu-card__meta">
+                                <div>
+                                    <dt>活動エリア</dt>
+                                    <dd>東京</dd>
+                                </div>
+                                <div>
+                                    <dt>締切</dt>
+                                    <dd><time datetime="2026-12-25">2026.12.25</time></dd>
+                                </div>
+                            </dl>
+
+                            <span class="pu-card__more">詳細を見る →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- 俳優 -->
+                <article class="pu-card" data-category="actor">
+                    <a class="pu-card__link" href="application.html?id=actor">
+                        <div class="pu-card__visual pu-visual--actor">
+                            <span class="pu-card__badge">PICK UP</span>
+                            <div class="pu-card__visual-text">
+                                <img src="img/短編映画.png" alt="短編映画「はじまりの日」出演者募集">
+                            </div>
+                        </div>
+
+                        <div class="pu-card__body">
+                            <div class="pu-card__tags">
+                                <span class="pu-tag">俳優・女優</span>
+                                <span class="pu-tag pu-tag--beginner">未経験可</span>
+                            </div>
+
+                            <h3>短編映画「はじまりの日」出演者募集</h3>
+                            <p class="pu-card__description">
+                                演じることに興味がある方へ。
+                                短編映画の制作を通して、作品づくりに参加できます。
+                            </p>
+
+                            <dl class="pu-card__meta">
+                                <div>
+                                    <dt>活動エリア</dt>
+                                    <dd>大阪</dd>
+                                </div>
+                                <div>
+                                    <dt>締切</dt>
+                                    <dd><time datetime="2027-01-10">2027.01.10</time></dd>
+                                </div>
+                            </dl>
+
+                            <span class="pu-card__more">詳細を見る →</span>
+                        </div>
+                    </a>
+                </article>
+
+                <!-- VTuber -->
+                <article class="pu-card" data-category="vtuber">
+                    <a class="pu-card__link" href="application.html?id=vtuber">
+                        <div class="pu-card__visual pu-visual--vtuber">
+                            <span class="pu-card__badge">PICK UP</span>
+                            <div class="pu-card__visual-text">
+                                <img src="img/バーチャル配信者.png" alt="バーチャル配信者オーディション">
+                            </div>
+                        </div>
+
+                        <div class="pu-card__body">
+                            <div class="pu-card__tags">
+                                <span class="pu-tag">VTuber</span>
+                                <span class="pu-tag pu-tag--beginner">未経験可</span>
+                            </div>
+
+                            <h3>バーチャル配信者オーディション</h3>
+                            <p class="pu-card__description">
+                                おしゃべり、ゲーム、歌。あなたの好きなことを、
+                                バーチャルの世界で発信してみませんか。
+                            </p>
+
+                            <dl class="pu-card__meta">
+                                <div>
+                                    <dt>活動エリア</dt>
+                                    <dd>全国・オンライン</dd>
+                                </div>
+                                <div>
+                                    <dt>締切</dt>
+                                    <dd><time datetime="2027-01-15">2027.01.15</time></dd>
+                                </div>
+                            </dl>
+
+                            <span class="pu-card__more">詳細を見る →</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+            <p class="pu-empty" hidden>
+                このカテゴリーの募集は現在ありません。
+            </p>
+        </section>
+
+        <section class="pu-guide" aria-labelledby="guide-title">
+            <div>
+                <p class="pu-eyebrow">YOUR FIRST STEP</p>
+                <h2 id="guide-title">応募する前の不安も、一つずつ。</h2>
+                <p>
+                    準備の仕方や募集の選び方を、お役立ちBlogで紹介しています。
+                </p>
+            </div>
+            <a class="pu-button" href="blog.html">
+                お役立ちBlogを読む →
+            </a>
+        </section>
+
+        <div class="pu-all-link">
+            <a class="pu-button pu-button--outline" href="audition.html">
+                オーディション一覧を見る →
+            </a>
+        </div>
+    </main>
+
+    <!-- indexと共通のフッター -->
+    <footer class="site-footer">
+        <div class="site-footer__main">
+            <a class="site-footer__logo" href="index.html">STAGE NOTE</a>
+
+            <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+                <div class="site-footer__group">
+                    <h2>AUDITION</h2>
+                    <ul>
+                        <li><a href="audition.html">オーディション一覧</a></li>
+                        <li><a href="pick-up.html" aria-current="page">注目の募集</a></li>
+                    </ul>
+                </div>
+
+                <div class="site-footer__group">
+                    <h2>GUIDE</h2>
+                    <ul>
+                        <li><a href="blog.html">お役立ちBlog</a></li>
+                        <li><a href="search.html">事務所を探す</a></li>
+                    </ul>
+                </div>
+
+                <div class="site-footer__group">
+                    <h2>ABOUT</h2>
+                    <ul>
+                        <li><a href="index.html#about-site">STAGE NOTEについて</a></li>
+                        <li><a href="index.html#first-guide">初めての方へ</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <p class="site-footer__note">
+            このサイトはポートフォリオ用の架空サイトです。
+            掲載している募集は架空の内容で、実際の応募は受け付けていません。
+        </p>
+        <p class="site-footer__copyright">
+            <small>© STAGE NOTE</small>
+        </p>
+    </footer>
+</body>
+
+</html>

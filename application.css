@@ -1,0 +1,714 @@
+@charset "UTF-8";
+
+/* 基本設定 */
+.detail-page {
+  margin: 0;
+  background: #fff;
+  color: #333;
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    sans-serif;
+  line-height: 1.8;
+}
+
+.detail-page *,
+.detail-page *::before,
+.detail-page *::after {
+  box-sizing: border-box;
+}
+
+.detail-page [hidden] {
+  display: none !important;
+}
+
+.detail-page a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.detail-page button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.detail-page h1,
+.detail-page h2,
+.detail-page h3,
+.detail-page p {
+  margin-top: 0;
+}
+
+.detail-page ul,
+.detail-page ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.detail-page a:focus-visible,
+.detail-page button:focus-visible,
+.detail-page summary:focus-visible {
+  outline: 2px solid #7b42ba;
+  outline-offset: 4px;
+}
+
+.dt-wrap {
+  width: 90%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.dt-skip {
+  position: absolute;
+  top: -80px;
+  left: 16px;
+  z-index: 20;
+  padding: 12px;
+  background: #fff;
+}
+
+.dt-skip:focus {
+  top: 10px;
+}
+
+/* ヘッダー */
+.dt-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  width: 92%;
+  min-height: 112px;
+  margin-inline: auto;
+}
+
+.detail-page .dt-logo {
+  color: #7b42ba;
+  font-size: 30px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.dt-logo small {
+  display: block;
+  color: #777;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+}
+
+.dt-navigation {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.dt-navigation a:hover {
+  color: #7b42ba;
+}
+
+.dt-menu-button {
+  display: none;
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid #ded5e7;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.detail-page .dt-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 22px;
+  border-radius: 6px;
+  background: #7b42ba;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.detail-page .dt-button:hover {
+  background: #63349a;
+  color: #fff;
+}
+
+/* パンくず・注意書き */
+.dt-breadcrumb {
+  margin-block: 22px;
+  color: #777;
+  font-size: 11px;
+}
+
+.dt-breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+}
+
+.dt-breadcrumb li:not(:last-child)::after {
+  content: "/";
+  margin-left: 12px;
+  color: #bbb;
+}
+
+.dt-breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.dt-notice {
+  margin-bottom: 28px;
+  padding: 12px 16px;
+  border-radius: 5px;
+  background: #faf8fc;
+  color: #777;
+  font-size: 11px;
+}
+
+.dt-message,
+.dt-error {
+  margin-block: 48px;
+  padding: 32px;
+  border: 1px solid #e5e1e9;
+  border-radius: 8px;
+}
+
+.dt-error h1 {
+  font-size: 24px;
+}
+
+/* 本文と右サイドバー */
+.dt-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  align-items: start;
+  gap: 40px;
+}
+
+.dt-article {
+  min-width: 0;
+}
+
+.dt-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.dt-tag {
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: #eee6f6;
+  color: #7b42ba;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.dt-tag-light {
+  background: #f5f4f7;
+  color: #777;
+}
+
+.dt-article-header h1 {
+  margin-bottom: 18px;
+  font-size: clamp(24px, 2.8vw, 32px);
+  line-height: 1.6;
+}
+
+.dt-intro {
+  margin-bottom: 28px;
+  color: #666;
+  font-size: 14px;
+}
+
+/* 写真なしのメインビジュアル */
+.dt-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  aspect-ratio: 16 / 9;
+  padding: 24px;
+  border-radius: 10px;
+  background: #eee6f5;
+  color: #635075;
+  text-align: center;
+}
+
+.dt-visual span {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.dt-visual strong {
+  font-size: clamp(28px, 4vw, 52px);
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+}
+
+.dt-visual small {
+  font-size: 11px;
+}
+
+.dt-visual[data-tone="pink"] {
+  background: #f5e8e9;
+  color: #855e66;
+}
+
+.dt-visual[data-tone="blue"] {
+  background: #e5eef3;
+  color: #496c7f;
+}
+
+/* ポイント */
+.dt-point {
+  margin-top: 28px;
+  padding: 24px;
+  border: 1px solid #e9dff2;
+  border-radius: 8px;
+  background: #faf7fd;
+}
+
+.dt-eyebrow {
+  margin-bottom: 8px;
+  color: #7b42ba;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.dt-point h2 {
+  margin-bottom: 14px;
+  font-size: 18px;
+}
+
+.dt-point li {
+  position: relative;
+  margin-top: 8px;
+  padding-left: 20px;
+  font-size: 13px;
+}
+
+.dt-point li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #7b42ba;
+}
+
+/* ページ内ナビ */
+.dt-local-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.dt-local-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 16px;
+  border: 1px solid #e5e1e9;
+  border-radius: 5px;
+  color: #666;
+  font-size: 12px;
+}
+
+.dt-local-nav a:hover {
+  background: #faf7fd;
+  color: #7b42ba;
+}
+
+/* 本文セクション */
+.dt-section {
+  margin-top: 44px;
+  scroll-margin-top: 24px;
+}
+
+.dt-section h2 {
+  margin-bottom: 22px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e1e9;
+  font-size: 22px;
+}
+
+.dt-paragraph {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+  line-height: 2;
+  white-space: pre-line;
+}
+
+/* 募集要項 */
+.dt-specs {
+  margin: 0;
+  border-top: 1px solid #e5e1e9;
+}
+
+.dt-specs > div {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  border-bottom: 1px solid #e5e1e9;
+}
+
+.dt-specs dt {
+  padding: 18px;
+  background: #faf9fc;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dt-specs dd {
+  margin: 0;
+  padding: 18px;
+  color: #666;
+  font-size: 13px;
+  white-space: pre-line;
+}
+
+/* 選考の流れ */
+.dt-steps {
+  display: grid;
+  gap: 14px;
+  counter-reset: selection;
+}
+
+.dt-steps li {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid #e5e1e9;
+  border-radius: 7px;
+  counter-increment: selection;
+}
+
+.dt-steps li::before {
+  content: counter(selection, decimal-leading-zero);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #f0e8f7;
+  color: #7b42ba;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.dt-steps h3 {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+.dt-steps p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+/* よくある質問 */
+.dt-faq details {
+  border-bottom: 1px solid #e5e1e9;
+}
+
+.dt-faq summary {
+  padding: 18px 0;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dt-faq details p {
+  margin-bottom: 18px;
+  color: #666;
+  font-size: 13px;
+}
+
+/* サイドバー */
+.dt-sidebar {
+  position: sticky;
+  top: 24px;
+}
+
+.dt-summary {
+  padding: 24px;
+  border: 1px solid #e5e1e9;
+  border-radius: 8px;
+}
+
+.dt-summary h2 {
+  font-size: 18px;
+}
+
+.dt-summary dl {
+  margin: 0 0 24px;
+}
+
+.dt-summary dl > div {
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.dt-summary dt {
+  margin-bottom: 4px;
+  color: #888;
+  font-size: 11px;
+}
+
+.dt-summary dd {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.dt-summary .dt-button {
+  width: 100%;
+}
+
+.dt-summary-note {
+  margin: 12px 0 0;
+  color: #888;
+  font-size: 10px;
+  text-align: center;
+}
+
+.dt-blog-link {
+  display: block;
+  margin-top: 18px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #faf7fd;
+}
+
+.dt-blog-link span {
+  display: block;
+  margin-bottom: 4px;
+  color: #777;
+  font-size: 11px;
+}
+
+.dt-blog-link strong {
+  color: #7b42ba;
+  font-size: 13px;
+}
+
+/* 下部の案内 */
+.dt-demo-note {
+  margin-top: 40px;
+  padding: 28px;
+  border-radius: 8px;
+  background: #faf9fc;
+}
+
+.dt-demo-note h2 {
+  font-size: 17px;
+}
+
+.dt-demo-note p {
+  color: #777;
+  font-size: 12px;
+}
+
+/* ほかの募集 */
+.dt-related {
+  margin-top: 64px;
+}
+
+.dt-related > h2 {
+  margin-bottom: 24px;
+  font-size: 22px;
+}
+
+.dt-related ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.dt-related a {
+  display: block;
+  height: 100%;
+  padding: 24px;
+  border: 1px solid #e5e1e9;
+  border-radius: 8px;
+}
+
+.dt-related a:hover {
+  border-color: #b99bd3;
+  background: #faf7fd;
+}
+
+.dt-related-category {
+  display: block;
+  margin-bottom: 10px;
+  color: #7b42ba;
+  font-size: 11px;
+}
+
+.dt-related h3 {
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.dt-related-link {
+  color: #7b42ba;
+  font-size: 12px;
+}
+
+/* 共通フッターを詳細ページにも適用 */
+.detail-page .site-footer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 100px auto 0;
+  padding: 40px 5% 24px;
+  border-top: 1px solid #e5e1e9;
+  background: #fff;
+  color: #333;
+  line-height: 1.7;
+}
+
+.detail-page .site-footer .site-footer__note {
+  margin: 0 0 12px;
+  color: #777;
+  font-size: 10px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.detail-page .site-footer .site-footer__copyright {
+  margin: 0;
+  color: #777;
+  font-size: 10px;
+  text-align: center;
+}
+
+.detail-page .site-footer__copyright small {
+  font-size: inherit;
+}
+
+/* タブレット */
+@media (max-width: 1024px) {
+  .dt-header-inner {
+    flex-wrap: wrap;
+    min-height: 94px;
+    padding-block: 20px;
+  }
+
+  .dt-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dt-navigation {
+    flex-wrap: wrap;
+    gap: 18px;
+    width: 100%;
+  }
+
+  .detail-page.dt-enhanced .dt-navigation {
+    display: none;
+  }
+
+  .detail-page.dt-enhanced .dt-navigation.is-active {
+    display: flex;
+  }
+
+  .dt-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+  }
+
+  .dt-sidebar {
+    position: static;
+  }
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+  .detail-page .dt-logo {
+    font-size: 24px;
+  }
+
+  .dt-navigation {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .dt-navigation a {
+    padding: 8px;
+  }
+
+  .dt-breadcrumb {
+    font-size: 10px;
+  }
+
+  .dt-visual {
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .dt-visual span,
+  .dt-visual small {
+    font-size: 9px;
+  }
+
+  .dt-point {
+    padding: 20px;
+  }
+
+  .dt-section {
+    margin-top: 34px;
+  }
+
+  .dt-section h2 {
+    font-size: 20px;
+  }
+
+  .dt-specs > div {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dt-specs dt {
+    padding: 12px 16px;
+  }
+
+  .dt-specs dd {
+    padding: 14px 16px;
+  }
+
+  .dt-steps li {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .dt-demo-note {
+    padding: 22px;
+  }
+
+  .dt-related {
+    margin-top: 44px;
+  }
+
+  .dt-related ul {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .detail-page .site-footer {
+    margin-top: 60px;
+    padding: 28px 0 24px;
+  }
+}
+

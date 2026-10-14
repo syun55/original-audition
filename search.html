@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="動画制作やライブ配信など、活動ジャンルから事務所を探せるSTAGE NOTEの紹介ページ。掲載内容はポートフォリオ用の架空データです。"
+  >
+  <title>事務所を探す｜STAGE NOTE</title>
+
+  <link rel="stylesheet" href="search.css">
+  <link rel="stylesheet" href="category.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+
+<body class="search-page">
+  <a class="ag-skip" href="#main">本文へ移動</a>
+
+  <!-- ヘッダー -->
+  <header class="ag-header">
+    <div class="ag-header-inner">
+      <a class="ag-logo" href="index.html">
+        STAGE NOTE
+        <small>はじめての挑戦を、ここから。</small>
+      </a>
+
+      <button
+        class="ag-menu-button"
+        type="button"
+        aria-controls="ag-navigation"
+        aria-expanded="false"
+        hidden
+      >
+        メニュー
+      </button>
+
+      <nav
+        class="ag-navigation"
+        id="ag-navigation"
+        aria-label="メインナビゲーション"
+      >
+        <a href="audition.html">オーディション一覧</a>
+        <a href="blog.html">お役立ちBlog</a>
+        <a href="search.html" aria-current="page">事務所を探す</a>
+        <a href="index.html#first-guide">初めての方へ</a>
+        <a class="ag-button" href="audition.html">
+          自分に合う募集を探す →
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 共通カテゴリー -->
+  <nav class="site-category" aria-label="カテゴリから探す">
+    <p class="site-category__label">カテゴリ：</p>
+
+    <div class="site-category__scroll">
+      <ul class="site-category__list">
+        <li>
+          <a href="audition.html?category=idol">
+            <span>アイドル</span><small>idol</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=model">
+            <span>モデル</span><small>model</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=vtuber">
+            <span>VTuber/VLiver</span><small>vtuber</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=liver">
+            <span>ライバー</span><small>liver</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=voice">
+            <span>声優</span><small>voice</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=actor">
+            <span>俳優・女優</span><small>actor</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=movie">
+            <span>映画・舞台</span><small>movie</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=influencer">
+            <span>インフルエンサー</span><small>influencer</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=talents">
+            <span>タレント</span><small>talents</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=music">
+            <span>音楽</span><small>music</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=work">
+            <span>案件</span><small>work</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=media">
+            <span>メディア</span><small>media</small>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <nav class="ag-breadcrumb ag-wrap" aria-label="パンくず">
+      <a href="index.html">TOP</a>
+      <span aria-hidden="true"> / </span>
+      <span aria-current="page">事務所を探す</span>
+    </nav>
+
+    <!-- ページタイトル -->
+    <section class="ag-hero" aria-labelledby="page-title">
+      <div class="ag-wrap">
+        <p class="ag-eyebrow">FIND YOUR PARTNER</p>
+        <h1 id="page-title">事務所を探す</h1>
+        <p class="ag-lead">あなたらしい活動を、一緒につくるパートナー。</p>
+        <p class="ag-description">
+          動画制作、ショート動画、ライブ配信。<br>
+          興味のあるジャンルから、活動のスタイルを見つけよう。
+        </p>
+      </div>
+    </section>
+
+    <div class="ag-wrap">
+      <!-- 検索 -->
+      <form
+        class="ag-search-form"
+        id="agency-search"
+        role="search"
+        aria-label="事務所の検索"
+      >
+        <fieldset disabled>
+          <legend>気になる事務所を探す</legend>
+
+          <div class="ag-search-fields">
+            <label class="ag-keyword-label">
+              キーワード
+              <input
+                id="ag-keyword"
+                name="q"
+                type="search"
+                placeholder="例：動画、音楽、福岡"
+                maxlength="100"
+              >
+            </label>
+
+            <label>
+              活動ジャンル
+              <select id="ag-genre" name="genre">
+                <option value="all">すべてのジャンル</option>
+                <option value="youtube">YouTube</option>
+                <option value="tiktok">TikTok</option>
+                <option value="vliver">Vライバー</option>
+                <option value="vtuber">VTuber</option>
+                <option value="live">ライブ配信</option>
+              </select>
+            </label>
+
+            <button class="ag-button" type="submit">この条件で探す</button>
+          </div>
+
+          <button class="ag-reset" type="reset">条件をクリア</button>
+        </fieldset>
+      </form>
+
+      <noscript>
+        <p>検索にはJavaScriptが必要です。以下にすべての事務所を表示しています。</p>
+      </noscript>
+
+      <!-- ジャンル別のページ内リンク -->
+      <nav class="ag-jump" aria-label="ジャンル別の一覧へ">
+        <a href="#youtube">YouTube</a>
+        <a href="#tiktok">TikTok</a>
+        <a href="#vliver">Vライバー</a>
+        <a href="#vtuber">VTuber</a>
+        <a href="#live">ライブ配信</a>
+      </nav>
+
+      <div class="ag-result-info">
+        <p id="ag-count" role="status" aria-live="polite" aria-atomic="true">
+          全10件の事務所
+        </p>
+        <p class="ag-notice">
+          掲載内容はすべて架空のサンプルです。
+        </p>
+      </div>
+
+      <div id="ag-results">
+        <!-- YouTube -->
+        <section
+          class="ag-section"
+          id="youtube"
+          data-genre="youtube"
+          aria-labelledby="youtube-title"
+        >
+          <div class="ag-section-heading">
+            <div>
+              <p class="ag-eyebrow">VIDEO CREATION</p>
+              <h2 id="youtube-title">YouTube事務所</h2>
+            </div>
+            <span class="ag-section-count">2件</span>
+          </div>
+          <p class="ag-section-description">
+            企画や撮影、編集など、動画づくりを支えるパートナー。
+          </p>
+
+          <ul class="ag-grid">
+            <li class="ag-card">
+              <article>
+                <div class="ag-card-heading">
+                  <span class="ag-avatar ag-tone-blue" aria-hidden="true">SN</span>
+                  <div>
+                    <p class="ag-platform">YouTube</p>
+                    <h3>STAGE NOTE VIDEO</h3>
+                    <p class="ag-area">東京・オンライン</p>
+                  </div>
+                </div>
+                <p class="ag-card-description">
+                  日常の「好き」を動画に。企画から編集まで一緒に考える制作チーム。
+                </p>
+                <ul class="ag-tags" aria-label="特徴">
+                  <li>企画サポート</li><li>動画編集</li>
+                </ul>
+                <details>
+                  <summary>事務所の紹介を見る</summary>
+                  <p>
+                    暮らしや趣味をテーマにした動画づくりを想定した架空の事務所です。
+                    アイデアの整理、撮影計画、編集の振り返りまで伴走する設定です。
+                  </p>
+                </details>
+              </article>
+            </li>
+
+            <li class="ag-card">
+              <article>
+                <div class="ag-card-heading">
+                  <span class="ag-avatar ag-tone-blue" aria-hidden="true">FL</span>
+                  <div>
+                    <p class="ag-platform">YouTube</p>
+                    <h3>FRAME LETTER</h3>
+                    <p class="ag-area">福岡・オンライン</p>
+                  </div>
+                </div>
+                <p class="ag-card-description">
+                  地域の魅力やものづくりを、あなたの視点で届ける動画スタジオ。
+                </p>
+                <ul class="ag-tags" aria-label="特徴">
+                  <li>地域発信</li><li>撮影サポート</li>
+                </ul>
+                <details>
+                  <summary>事務所の紹介を見る</summary>
+                  <p>
+                    地域のお店やものづくりの現場を紹介する活動を想定しています。
+                    取材の構成や撮影の進め方を、一緒に組み立てる架空の制作チームです。
+                  </p>
+                </details>
+              </article>
+            </li>
+          </ul>
+        </section>
+
+        <!-- TikTok -->
+        <section
+          class="ag-section"
+          id="tiktok"
+          data-genre="tiktok"
+          aria-labelledby="tiktok-title"
+        >
+          <div class="ag-section-heading">
+            <div>
+              <p class="ag-eyebrow">SHORT VIDEO</p>
+              <h2 id="tiktok-title">TikTok事務所</h2>
+            </div>
+            <span class="ag-section-count">2件</span>
+          </div>
+          <p class="ag-section-description">
+            短い動画の中に、自分らしい表現を。
+          </p>
+
+          <ul class="ag-grid">
+            <li class="ag-card">
+              <article>
+                <div class="ag-card-heading">
+                  <span class="ag-avatar ag-tone-pink" aria-hidden="true">SC</span>
+                  <div>
+                    <p class="ag-platform">TikTok</p>
+                    <h3>SHORT CANVAS</h3>
+                    <p class="ag-area">東京・オンライン</p>
+                  </div>
+                </div>
+                <p class="ag-card-description">
+                  ファッションや日常のアイデアを、ショート動画で表現するチーム。
+                </p>
+                <ul class="ag-tags" aria-label="特徴">
+                  <li>ファッション</li><li>ショート動画</li>
+                </ul>
+                <details>
+                  <summary>事務所の紹介を見る</summary>
+                  <p>
+                    自分の好きなスタイルを発信したい人を想定した架空の事務所です。
+                    短い動画の構成や見せ方を考え、継続して制作する流れをサポートする設定です。
+                  </p>
+                </details>
+              </article>
+            </li>
+
+            <li class="ag-card">
+              <article>
+                <div class="ag-card-heading">
+                  <span class="ag-avatar ag-tone-pink" aria-hidden="true">RM</span>
+                  <div>
+                    <p class="ag-platform">TikTok</p>
+                    <h3>RHYTHM MEMO</h3>
+                    <p class="ag-area">大阪・オンライン</p>
+                  </div>
+                </div>
+                <p class="ag-card-description">
+                  ダンスや音楽など、得意なことを短い動画で届けるクリエイターチーム。
+                </p>
+                <ul class="ag-tags" aria-label="特徴">
+                  <li>ダンス</li><li>音楽</li>
+                </ul>
+                <details>
+                  <summary>事務所の紹介を見る</summary>
+                  <p>
+                    ダンスや演奏を動画にする活動を想定しています。
+                    撮影する角度や構成を工夫し、表現を磨いていく架空のチームです。
+                  </p>
+                </details>
+              </article>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Vライバー -->
+        <section
+          class="ag-section"
+          id="vliver"
+          data-genre="vliver"
+          aria-labelledby="vliver-title"
+        >
+          <div class="ag-section-heading">
+            <div>
+              <p class="ag-eyebrow">VIRTUAL LIVE</p>
+              <h2 id="vliver-title">Vライバー事務所</h2>
+            </div>
+            <span class="ag-section-count">2件</span>
+          </div>
+          <p class="ag-section-description">
+            アバターを通して、声や会話の魅力を届けよう。
+          </p>
+
+          <ul class="ag-grid">
+            <li class="ag-card">
+              <article>
+                <div class="ag-card-heading">
+                  <span class="ag-avatar ag-tone-purple" aria-hidden="true">SV</span>
+                  <div>
+                    <p class="ag-platform">Vライバー</p>
+                    <h3>STAGE NOTE VIRTUAL</h3>
+                    <p class="ag-area">全国・オンライン</p>
+                  </div>
+                </div>
+                <p class="ag-card-description">
+                  初めてのバーチャル配信を、準備から支えるサポートチーム。
+                </p>
+                <ul class="ag-tags" aria-label="特徴">
+                  <li>配信準備</li><li>トーク</li>
+                </ul>
+                <details>
+                  <summary>事務所の紹介を見る</summary>
+                  <p>
+                    配信テーマや活動ペースを整理するところから始める設定です。
+                    アバターを使ったトーク配信を想定した架空の事務所です。
+                  </p>
+                </details>
+              </article>
+            </li>
+
+            <li class="ag-card">
+              <article>
+                <div class="ag-card-heading">
+                  <span class="ag-avatar ag-tone-purple" aria-hidden="true">HR</span>
+                  <div>
+                    <p class="ag-platform">Vライバー</p>
+                    <h3>HOSHIIRO ROOM</h3>
+                    <p class="ag-area">全国・オンライン</p>
+                  </div>
+                </div>
+                <p class="ag-card-description">
+                  声と会話で、自分らしい居場所をつくるバーチャル配信チーム。
+                </p>
+                <ul class="ag-tags" aria-label="特徴">
+                  <li>雑談</li><li>コミュニティ</li>
+                </ul>
+                <details>
+                  <summary>事務所の紹介を見る</summary>
+                  <p>
+                    リスナーとの会話を大切にする活動を想定しています。
+                    配信の振り返りやテーマの相談を行う架空のチームです。
+                  </p>
+                </details>
+              </article>
+            </li>
+          </ul>
+        </section>
+
+        <!-- VTuber -->
+        <section
+          class="ag-section"
+          id="vtuber"
+          data-genre="vtuber"
+          aria-labelledby="vtuber-title"
+        >
+          <div class="ag-section-heading">
+            <div>
+              <p class="ag-eyebrow">VIRTUAL CREATOR</p>
+              <h2 id="vtuber-title">VTuber事務所</h2>
+            </div>
+            <span class="ag-section-count">2件</span>
+          </div>
+          <p class="ag-section-description">
+            キャラクターと表現を組み合わせて、活動の幅を広げよう。
+          </p>
+
+          <ul class="ag-grid">
+            <li class="ag-card">
+              <article>
+                <div class="ag-card-heading">
+                  <span class="ag-avatar ag-tone-purple" aria-hidden="true">OP</span>
+                  <div>
+                    <p class="ag-platform">VTuber</p>
+                    <h3>ORBIT PALETTE</h3>
+                    <p class="ag-area">東京・オンライン</p>
+                  </div>
+                </div>
+                <p class="ag-card-description">
+                  ゲームや企画動画を通して、キャラクターの世界観を育てるチーム。
+                </p>
+                <ul class="ag-tags" aria-label="特徴">
+                  <li>ゲーム</li><li>企画動画</li>
+                </ul>
+                <details>
+                  <summary>事務所の紹介を見る</summary>
+                  <p>
+                    ゲーム配信と動画制作を中心とする架空の事務所です。
+                    活動のコンセプトや、継続して楽しめる企画を一緒に考える設定です。
+                  </p>
+                </details>
+              </article>
+            </li>
+
+            <li class="ag-card">
+              <article>
+                <div class="ag-card-heading">
+                  <span class="ag-avatar ag-tone-purple" aria-hidden="true">ME</span>
+                  <div>
+                    <p class="ag-platform">VTuber</p>
+                    <h3>MELODY ECHO</h3>
+                    <p class="ag-area">全国・オンライン</p>
+                  </div>
+                </div>
+                <p class="ag-card-description">
+                  歌や音楽を軸に、自分らしい表現を探すバーチャルプロジェクト。
+                </p>
+                <ul class="ag-tags" aria-label="特徴">
+                  <li>歌</li><li>音楽制作</li>
+                </ul>
+                <details>
+                  <summary>事務所の紹介を見る</summary>
+                  <p>
+                    歌の動画や音楽配信を想定した架空のプロジェクトです。
+                    表現したい雰囲気を整理し、制作の計画を立てる設定です。
+                  </p>
+                </details>
+              </article>
+            </li>
+          </ul>
+        </section>
+
+        <!-- ライブ配信 -->
+        <section
+          class="ag-section"
+          id="live"
+          data-genre="live"
+          aria-labelledby="live-title"
+        >
+          <div class="ag-section-heading">
+            <div>
+              <p class="ag-eyebrow">LIVE STREAMING</p>
+              <h2 id="live-title">ライブ配信事務所</h2>
+            </div>
+            <span class="ag-section-count">2件</span>
+          </div>
+          <p class="ag-section-description">
+            リアルタイムの交流から、自分のファンとつながろう。
+          </p>
+
+          <ul class="ag-grid">
+            <li class="ag-card">
+              <article>
+                <div class="ag-card-heading">
+                  <span class="ag-avatar ag-tone-green" aria-hidden="true">LD</span>
+                  <div>
+                    <p class="ag-platform">ライブ配信</p>
+                    <h3>LIVE DAYS</h3>
+                    <p class="ag-area">福岡・オンライン</p>
+                  </div>
+                </div>
+                <p class="ag-card-description">
+                  毎日の会話や趣味を、無理のないペースで届ける配信チーム。
+                </p>
+                <ul class="ag-tags" aria-label="特徴">
+                  <li>雑談</li><li>趣味</li>
+                </ul>
+                <details>
+                  <summary>事務所の紹介を見る</summary>
+                  <p>
+                    日常のトークや趣味の紹介を想定した架空の事務所です。
+                    話題の準備や配信スケジュールの相談を行う設定です。
+                  </p>
+                </details>
+              </article>
+            </li>
+
+            <li class="ag-card">
+              <article>
+                <div class="ag-card-heading">
+                  <span class="ag-avatar ag-tone-green" aria-hidden="true">SL</span>
+                  <div>
+                    <p class="ag-platform">ライブ配信</p>
+                    <h3>STAGE NOTE LIVE</h3>
+                    <p class="ag-area">全国・オンライン</p>
+                  </div>
+                </div>
+                <p class="ag-card-description">
+                  歌や演奏、トークなど、得意なことをライブで届けるプロジェクト。
+                </p>
+                <ul class="ag-tags" aria-label="特徴">
+                  <li>歌・演奏</li><li>配信企画</li>
+                </ul>
+                <details>
+                  <summary>事務所の紹介を見る</summary>
+                  <p>
+                    得意な表現をライブ配信で届ける架空のプロジェクトです。
+                    配信内容の構成や、音声・映像の準備を支える設定です。
+                  </p>
+                </details>
+              </article>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="ag-empty" id="ag-empty" hidden>
+        <h2>条件に合う事務所が見つかりませんでした。</h2>
+        <p>キーワードを短くするか、ジャンルを変更してください。</p>
+        <button class="ag-button" type="reset" form="agency-search">
+          条件をクリア
+        </button>
+      </div>
+
+      <aside class="ag-guide">
+        <div>
+          <p class="ag-eyebrow">YOUR NEXT STEP</p>
+          <h2>活動を始める前に、準備のヒントを。</h2>
+          <p>自己PRや配信準備について、お役立ちBlogで紹介しています。</p>
+        </div>
+        <a class="ag-button" href="blog.html">お役立ちBlogへ →</a>
+      </aside>
+    </div>
+  </main>
+
+  <!-- 共通フッター -->
+  <footer class="site-footer">
+    <div class="site-footer__main">
+      <a class="site-footer__logo" href="index.html">STAGE NOTE</a>
+
+      <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+        <div class="site-footer__group">
+          <h2>AUDITION</h2>
+          <ul>
+            <li><a href="audition.html">オーディション一覧</a></li>
+            <li><a href="pick-up.html">注目のオーディション</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__group">
+          <h2>GUIDE</h2>
+          <ul>
+            <li><a href="blog.html">お役立ちBlog</a></li>
+            <li><a href="search.html">事務所を探す</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__group">
+          <h2>ABOUT</h2>
+          <ul>
+            <li><a href="index.html#about-site">このサイトについて</a></li>
+            <li><a href="index.html#first-guide">初めての方へ</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <p class="site-footer__note">
+      ポートフォリオ用の架空サイトです。応募・掲載依頼は受け付けていません。
+    </p>
+    <p class="site-footer__copyright">
+      <small>© STAGE NOTE / Portfolio project</small>
+    </p>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

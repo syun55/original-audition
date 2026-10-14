@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="STAGE NOTEのオーディション一覧。カテゴリやキーワードから、自分に合う挑戦を探せます。ポートフォリオ用の架空サイトです。">
+    <title>オーディション一覧｜STAGE NOTE</title>
+    <link rel="stylesheet" href="audition.css">
+    <link rel="stylesheet" href="category.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body class="audition-page">
+    <a class="au-skip" href="#main">本文へ移動</a>
+    <header class="au-header">
+        <div class="au-header-inner"><a class="au-logo" href="index.html">STAGE
+                NOTE<small>はじめての挑戦を、ここから。</small></a><button class="au-menu-toggle" type="button" aria-expanded="false"
+                aria-controls="au-navigation" hidden>メニュー</button>
+            <nav id="au-navigation" class="au-nav" aria-label="メインナビゲーション"><a href="audition.html"
+                    aria-current="page">オーディション一覧</a><a href="blog.html">お役立ちBlog</a><a href="search.html">事務所を探す</a><a
+                    href="index.html#first-guide">初めての方へ</a><a class="au-button" href="#search-form">自分に合う募集を探す →</a>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <nav class="au-breadcrumb au-wrap" aria-label="パンくず">
+            <ol>
+                <li><a href="index.html">TOP</a></li>
+                <li aria-current="page">オーディション一覧</li>
+            </ol>
+        </nav>
+        <nav class="site-category" aria-label="カテゴリから探す">
+            <p class="site-category__label">カテゴリ：</p>
+
+            <div class="site-category__scroll">
+                <ul class="site-category__list">
+                    <li>
+                        <a href="audition.html?category=idol" data-category-link="idol">
+                            <span>アイドル</span>
+                            <small>idol</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="audition.html?category=model" data-category-link="model">
+                            <span>モデル</span>
+                            <small>model</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="audition.html?category=vtuber" data-category-link="vtuber">
+                            <span>VTuber/VLiver</span>
+                            <small>vtuber</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="audition.html?category=liver" data-category-link="liver">
+                            <span>ライバー</span>
+                            <small>liver</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="audition.html?category=voice" data-category-link="voice">
+                            <span>声優</span>
+                            <small>voice</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="audition.html?category=actor" data-category-link="actor">
+                            <span>俳優・女優</span>
+                            <small>actor</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="audition.html?category=movie" data-category-link="movie">
+                            <span>映画・舞台</span>
+                            <small>movie</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="audition.html?category=influencer" data-category-link="influencer">
+                            <span>インフルエンサー</span>
+                            <small>influencer</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="audition.html?category=talents" data-category-link="talents">
+                            <span>タレント</span>
+                            <small>talents</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="audition.html?category=music" data-category-link="music">
+                            <span>音楽</span>
+                            <small>music</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="audition.html?category=work" data-category-link="work">
+                            <span>案件</span>
+                            <small>work</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="audition.html?category=media" data-category-link="media">
+                            <span>メディア</span>
+                            <small>media</small>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <section class="au-list-section au-wrap" aria-labelledby="page-title">
+            <div class="au-heading">
+                <p>AUDITION</p>
+                <h1 id="page-title">オーディション一覧</h1><span>あなたの「やってみたい」に合う、最初の一歩を。</span>
+            </div>
+            <form class="au-search" id="search-form" role="search" aria-label="募集の絞り込み">
+                <fieldset disabled>
+                    <legend class="au-sr">募集の検索条件</legend>
+                    <div class="au-search-fields"><label class="au-keyword">キーワード<input type="search" id="au-keyword"
+                                name="q" placeholder="例：声優、福岡、オンライン" maxlength="100"></label><label>カテゴリ<select
+                                id="au-category" name="category">
+                                <option value="all">すべてのカテゴリ</option>
+                                <option value="idol">アイドル</option>
+                                <option value="model">モデル</option>
+                                <option value="vtuber">VTuber / VLiver</option>
+                                <option value="liver">ライバー</option>
+                                <option value="voice">声優</option>
+                                <option value="actor">俳優・女優</option>
+                                <option value="movie">映画・舞台</option>
+                                <option value="influencer">インフルエンサー</option>
+                                <option value="talents">タレント</option>
+                                <option value="music">音楽</option>
+                                <option value="work">案件</option>
+                                <option value="media">メディア</option>
+                            </select></label><button class="au-button au-search-button" type="submit">この条件で探す</button>
+                    </div>
+                    <div class="au-search-bottom"><label class="au-check"><input id="au-beginner" type="checkbox"
+                                name="beginner"> 未経験可のみ</label><button type="reset" class="au-reset">条件をクリア</button>
+                    </div>
+                </fieldset>
+            </form>
+            <noscript>
+                <p class="au-notice">検索・並び替えにはJavaScriptが必要です。以下にすべての募集を表示しています。</p>
+            </noscript>
+            <div class="au-list-toolbar">
+                <p id="au-count" role="status" aria-live="polite" aria-atomic="true">全12件を表示</p><label>並び順 <select
+                        id="au-sort" disabled>
+                        <option value="new">新着順</option>
+                        <option value="deadline">締切が近い順</option>
+                    </select></label>
+            </div>
+            <p class="au-notice">掲載内容はすべて架空の募集です。実際の応募は受け付けていません。</p>
+            <ul class="au-grid" id="au-results" aria-label="オーディション一覧">
+                <li class="au-card" data-category="music" data-search="新人ボーカルオーディション 全国・オンライン 音楽 FIRST VOICE"
+                    data-deadline="2026-11-30" data-order="0" data-beginner="true">
+                    <article><a href="application.html?id=vocal" class="au-card-link">
+                            <div class="au-visual au-tone-0" aria-hidden="true">
+                               <img src="img/新人ボーカル.png" alt="新人ボーカル">
+                            </div>
+                            <div class="au-card-body">
+                                <div class="au-tags"><span class="au-tag">音楽</span><span
+                                        class="au-condition">未経験可</span></div>
+                                <h2>新人ボーカルオーディション</h2>
+                                <p class="au-area">活動エリア：全国・オンライン</p>
+                                <div class="au-card-meta"><span class="au-web">Web応募</span><span>締切 <time
+                                            datetime="2026-11-30">2026.11.30</time></span></div><span
+                                    class="au-card-detail">詳細を見る <span aria-hidden="true">→</span></span>
+                            </div>
+                        </a></article>
+                </li>
+                <li class="au-card" data-category="model" data-search="福岡発・新人モデルオーディション 福岡 モデル NEW FACE"
+                    data-deadline="2026-12-15" data-order="1" data-beginner="true">
+                    <article><a href="application.html?id=model" class="au-card-link">
+                            <div class="au-visual au-tone-1" aria-hidden="true">
+                                 <img src="img/新人モデル.png" alt="新人モデル">
+                            </div>
+                            <div class="au-card-body">
+                                <div class="au-tags"><span class="au-tag">モデル</span><span
+                                        class="au-condition">未経験可</span></div>
+                                <h2>福岡発・新人モデルオーディション</h2>
+                                <p class="au-area">活動エリア：福岡</p>
+                                <div class="au-card-meta"><span class="au-web">Web応募</span><span>締切 <time
+                                            datetime="2026-12-15">2026.12.15</time></span></div><span
+                                    class="au-card-detail">詳細を見る <span aria-hidden="true">→</span></span>
+                            </div>
+                        </a></article>
+                </li>
+                <li class="au-card" data-category="voice" data-search="朗読プロジェクト・キャスト募集 全国・オンライン 声優 YOUR VOICE"
+                    data-deadline="2026-12-20" data-order="2" data-beginner="true">
+                    <article><a href="application.html?id=reading" class="au-card-link">
+                            <div class="au-visual au-tone-2" aria-hidden="true">
+                                 <img src="img/朗読プロジェクト.png" alt="朗読プロジェクト">
+                            </div>
+                            <div class="au-card-body">
+                                <div class="au-tags"><span class="au-tag">声優</span><span
+                                        class="au-condition">未経験可</span></div>
+                                <h2>朗読プロジェクト・キャスト募集</h2>
+                                <p class="au-area">活動エリア：全国・オンライン</p>
+                                <div class="au-card-meta"><span class="au-web">Web応募</span><span>締切 <time
+                                            datetime="2026-12-20">2026.12.20</time></span></div><span
+                                    class="au-card-detail">詳細を見る <span aria-hidden="true">→</span></span>
+                            </div>
+                        </a></article>
+                </li>
+                <li class="au-card" data-category="idol" data-search="新しいユニットのメンバー募集 東京 アイドル FIRST LIGHT"
+                    data-deadline="2026-12-25" data-order="3" data-beginner="true">
+                    <article><a href="application.html?id=idol" class="au-card-link">
+                            <div class="au-visual au-tone-0" aria-hidden="true">
+                                <img src="img/新しいユニット.png" alt="新しいユニットのメンバー募集">
+                            </div>
+                            <div class="au-card-body">
+                                <div class="au-tags"><span class="au-tag">アイドル</span><span
+                                        class="au-condition">未経験可</span></div>
+                                <h2>新しいユニットのメンバー募集</h2>
+                                <p class="au-area">活動エリア：東京</p>
+                                <div class="au-card-meta"><span class="au-web">Web応募</span><span>締切 <time
+                                            datetime="2026-12-25">2026.12.25</time></span></div><span
+                                    class="au-card-detail">詳細を見る <span aria-hidden="true">→</span></span>
+                            </div>
+                        </a></article>
+                </li>
+                <li class="au-card" data-category="actor" data-search="短編映画「はじまりの日」出演者募集 大阪 俳優・女優 NEXT SCENE"
+                    data-deadline="2027-01-10" data-order="4" data-beginner="true">
+                    <article><a href="application.html?id=actor" class="au-card-link">
+                            <div class="au-visual au-tone-1" aria-hidden="true">
+                                <img src="img/短編映画.png" alt="短編映画「はじまりの日」出演者募集">
+                            </div>
+                            <div class="au-card-body">
+                                <div class="au-tags"><span class="au-tag">俳優・女優</span><span
+                                        class="au-condition">未経験可</span></div>
+                                <h2>短編映画「はじまりの日」出演者募集</h2>
+                                <p class="au-area">活動エリア：大阪</p>
+                                <div class="au-card-meta"><span class="au-web">Web応募</span><span>締切 <time
+                                            datetime="2027-01-10">2027.01.10</time></span></div><span
+                                    class="au-card-detail">詳細を見る <span aria-hidden="true">→</span></span>
+                            </div>
+                        </a></article>
+                </li>
+                <li class="au-card" data-category="vtuber"
+                    data-search="バーチャル配信者オーディション 全国・オンライン VTuber / VLiver HELLO WORLD" data-deadline="2027-01-15"
+                    data-order="5" data-beginner="true">
+                    <article><a href="application.html?id=vtuber" class="au-card-link">
+                            <div class="au-visual au-tone-2" aria-hidden="true">
+                                <img src="img/バーチャル配信者.png" alt="バーチャル配信者オーディション">
+                            </div>
+                            <div class="au-card-body">
+                                <div class="au-tags"><span class="au-tag">VTuber / VLiver</span><span
+                                        class="au-condition">未経験可</span></div>
+                                <h2>バーチャル配信者オーディション</h2>
+                                <p class="au-area">活動エリア：全国・オンライン</p>
+                                <div class="au-card-meta"><span class="au-web">Web応募</span><span>締切 <time
+                                            datetime="2027-01-15">2027.01.15</time></span></div><span
+                                    class="au-card-detail">詳細を見る <span aria-hidden="true">→</span></span>
+                            </div>
+                        </a></article>
+                </li>
+                <li class="au-card" data-category="liver" data-search="トーク配信プロジェクト・新メンバー募集 全国・オンライン ライバー LIVE TOGETHER"
+                    data-deadline="2026-11-15" data-order="6" data-beginner="true">
+                    <article><a href="application.html?id=liver" class="au-card-link">
+                            <div class="au-visual au-tone-0" aria-hidden="true">
+                                <img src="img/トーク配信.png" alt="トーク配信プロジェクト・新メンバー募集">
+                            </div>
+                            <div class="au-card-body">
+                                <div class="au-tags"><span class="au-tag">ライバー</span><span
+                                        class="au-condition">未経験可</span></div>
+                                <h2>トーク配信プロジェクト・新メンバー募集</h2>
+                                <p class="au-area">活動エリア：全国・オンライン</p>
+                                <div class="au-card-meta"><span class="au-web">Web応募</span><span>締切 <time
+                                            datetime="2026-11-15">2026.11.15</time></span></div><span
+                                    class="au-card-detail">詳細を見る <span aria-hidden="true">→</span></span>
+                            </div>
+                        </a></article>
+                </li>
+                <li class="au-card" data-category="movie" data-search="小劇場公演・アンサンブルキャスト募集 東京 映画・舞台 ON THE STAGE"
+                    data-deadline="2026-11-20" data-order="7" data-beginner="false">
+                    <article><a href="application.html?id=stage" class="au-card-link">
+                            <div class="au-visual au-tone-1" aria-hidden="true">
+                                <!-- 写真追加時は、この枠の中を img タグに置き換えます。 --><span>STAGE NOTE / 映画・舞台</span><strong>ON THE
+                                    STAGE</strong><small>PHOTO SPACE</small>
+                            </div>
+                            <div class="au-card-body">
+                                <div class="au-tags"><span class="au-tag">映画・舞台</span><span
+                                        class="au-condition">経験者向け</span></div>
+                                <h2>小劇場公演・アンサンブルキャスト募集</h2>
+                                <p class="au-area">活動エリア：東京</p>
+                                <div class="au-card-meta"><span class="au-web">Web応募</span><span>締切 <time
+                                            datetime="2026-11-20">2026.11.20</time></span></div><span
+                                    class="au-card-detail">詳細を見る <span aria-hidden="true">→</span></span>
+                            </div>
+                        </a></article>
+                </li>
+                <li class="au-card" data-category="influencer"
+                    data-search="日常の魅力を届けるクリエイター募集 全国・オンライン インフルエンサー YOUR STYLE" data-deadline="2026-12-10"
+                    data-order="8" data-beginner="true">
+                    <article><a href="application.html?id=creator" class="au-card-link">
+                            <div class="au-visual au-tone-2" aria-hidden="true">
+                                <!-- 写真追加時は、この枠の中を img タグに置き換えます。 --><span>STAGE NOTE / インフルエンサー</span><strong>YOUR
+                                    STYLE</strong><small>PHOTO SPACE</small>
+                            </div>
+                            <div class="au-card-body">
+                                <div class="au-tags"><span class="au-tag">インフルエンサー</span><span
+                                        class="au-condition">未経験可</span></div>
+                                <h2>日常の魅力を届けるクリエイター募集</h2>
+                                <p class="au-area">活動エリア：全国・オンライン</p>
+                                <div class="au-card-meta"><span class="au-web">Web応募</span><span>締切 <time
+                                            datetime="2026-12-10">2026.12.10</time></span></div><span
+                                    class="au-card-detail">詳細を見る <span aria-hidden="true">→</span></span>
+                            </div>
+                        </a></article>
+                </li>
+                <li class="au-card" data-category="talents" data-search="地域イベント・新人タレント募集 福岡 タレント BE YOURSELF"
+                    data-deadline="2026-11-25" data-order="9" data-beginner="true">
+                    <article><a href="application.html?id=talent" class="au-card-link">
+                            <div class="au-visual au-tone-0" aria-hidden="true">
+                                <!-- 写真追加時は、この枠の中を img タグに置き換えます。 --><span>STAGE NOTE / タレント</span><strong>BE
+                                    YOURSELF</strong><small>PHOTO SPACE</small>
+                            </div>
+                            <div class="au-card-body">
+                                <div class="au-tags"><span class="au-tag">タレント</span><span
+                                        class="au-condition">未経験可</span></div>
+                                <h2>地域イベント・新人タレント募集</h2>
+                                <p class="au-area">活動エリア：福岡</p>
+                                <div class="au-card-meta"><span class="au-web">Web応募</span><span>締切 <time
+                                            datetime="2026-11-25">2026.11.25</time></span></div><span
+                                    class="au-card-detail">詳細を見る <span aria-hidden="true">→</span></span>
+                            </div>
+                        </a></article>
+                </li>
+                <li class="au-card" data-category="work" data-search="ブランド紹介動画・出演モデル募集 大阪 案件 CREATE MORE"
+                    data-deadline="2026-12-05" data-order="10" data-beginner="false">
+                    <article><a href="application.html?id=brand" class="au-card-link">
+                            <div class="au-visual au-tone-1" aria-hidden="true">
+                                <!-- 写真追加時は、この枠の中を img タグに置き換えます。 --><span>STAGE NOTE / 案件</span><strong>CREATE
+                                    MORE</strong><small>PHOTO SPACE</small>
+                            </div>
+                            <div class="au-card-body">
+                                <div class="au-tags"><span class="au-tag">案件</span><span
+                                        class="au-condition">経験者向け</span></div>
+                                <h2>ブランド紹介動画・出演モデル募集</h2>
+                                <p class="au-area">活動エリア：大阪</p>
+                                <div class="au-card-meta"><span class="au-web">Web応募</span><span>締切 <time
+                                            datetime="2026-12-05">2026.12.05</time></span></div><span
+                                    class="au-card-detail">詳細を見る <span aria-hidden="true">→</span></span>
+                            </div>
+                        </a></article>
+                </li>
+                <li class="au-card" data-category="media" data-search="街の魅力を伝える番組リポーター募集 福岡 メディア LOCAL STORY"
+                    data-deadline="2026-12-18" data-order="11" data-beginner="true">
+                    <article><a href="application.html?id=reporter" class="au-card-link">
+                            <div class="au-visual au-tone-2" aria-hidden="true">
+                                <!-- 写真追加時は、この枠の中を img タグに置き換えます。 --><span>STAGE NOTE / メディア</span><strong>LOCAL
+                                    STORY</strong><small>PHOTO SPACE</small>
+                            </div>
+                            <div class="au-card-body">
+                                <div class="au-tags"><span class="au-tag">メディア</span><span
+                                        class="au-condition">未経験可</span></div>
+                                <h2>街の魅力を伝える番組リポーター募集</h2>
+                                <p class="au-area">活動エリア：福岡</p>
+                                <div class="au-card-meta"><span class="au-web">Web応募</span><span>締切 <time
+                                            datetime="2026-12-18">2026.12.18</time></span></div><span
+                                    class="au-card-detail">詳細を見る <span aria-hidden="true">→</span></span>
+                            </div>
+                        </a></article>
+                </li>
+            </ul>
+            <div class="au-empty" hidden>
+                <h2>条件に合う募集が見つかりませんでした。</h2>
+                <p>キーワードを短くするか、カテゴリや「未経験可のみ」の条件を変更してみてください。</p><button type="button" class="au-button"
+                    id="au-empty-reset">すべての募集を見る</button>
+            </div>
+            <div class="au-more-wrap"><button class="au-more" id="au-more" type="button" hidden>もっと見る</button></div>
+        </section>
+        <aside class="au-guide au-wrap" aria-labelledby="guide-title">
+            <div><span>FIRST STEP GUIDE</span>
+                <h2 id="guide-title">応募が初めての方へ。</h2>
+                <p>応募条件や費用、活動場所を確認して、自分のペースで準備を進めよう。</p>
+            </div><a class="au-outline" href="index.html#first-guide">応募の流れを見る →</a>
+        </aside>
+    </main>
+    <footer class="site-footer">
+        <div class="site-footer__main">
+            <a class="site-footer__logo" href="index.html">
+                STAGE NOTE
+            </a>
+
+            <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+                <div class="site-footer__group">
+                    <h2>AUDITION</h2>
+                    <ul>
+                        <li>
+                            <a href="audition.html">オーディション一覧</a>
+                        </li>
+                        <li>
+                            <a href="pick-up.html">注目のオーディション</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="site-footer__group">
+                    <h2>GUIDE</h2>
+                    <ul>
+                        <li>
+                            <a href="blog.html">お役立ちBlog</a>
+                        </li>
+                        <li>
+                            <a href="search.html">事務所を探す</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="site-footer__group">
+                    <h2>ABOUT</h2>
+                    <ul>
+                        <li>
+                            <a href="index.html#about-site">このサイトについて</a>
+                        </li>
+                        <li>
+                            <a href="index.html#first-guide">初めての方へ</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <p class="site-footer__note">
+            ポートフォリオ用の架空サイトです。応募・掲載依頼は受け付けていません。
+        </p>
+
+        <p class="site-footer__copyright">
+            <small>© STAGE NOTE / Portfolio project</small>
+        </p>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="js/audition.js" defer></script>
+</body>
+
+</html>

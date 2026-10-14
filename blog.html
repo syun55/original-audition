@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>お役立ちBlog｜STAGE NOTE</title>
+  <meta
+    name="description"
+    content="初めてのオーディション、自己PR、ライブ配信のヒントを届けるSTAGE NOTEのお役立ちBlog。ポートフォリオ用の架空サイトです。"
+  >
+
+  <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="category.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+
+<body class="blog-page">
+  <a class="bl-skip" href="#main">本文へ移動</a>
+
+  <!-- ヘッダー -->
+  <header class="bl-header">
+    <div class="bl-header-inner">
+      <a class="bl-logo" href="index.html">
+        STAGE NOTE
+        <small>はじめての挑戦を、ここから。</small>
+      </a>
+
+      <button
+        class="bl-menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="bl-navigation"
+        hidden
+      >
+        メニュー
+      </button>
+
+      <nav
+        id="bl-navigation"
+        class="bl-nav"
+        aria-label="メインナビゲーション"
+      >
+        <a href="audition.html">オーディション一覧</a>
+        <a href="blog.html" aria-current="page">お役立ちBlog</a>
+        <a href="search.html">事務所を探す</a>
+        <a href="index.html#first-guide">初めての方へ</a>
+        <a class="bl-button" href="audition.html">
+          自分に合う募集を探す →
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 共通カテゴリー -->
+  <nav class="site-category" aria-label="カテゴリから探す">
+    <p class="site-category__label">カテゴリ：</p>
+
+    <div class="site-category__scroll">
+      <ul class="site-category__list">
+        <li>
+          <a href="audition.html?category=idol" data-category-link="idol">
+            <span>アイドル</span>
+            <small>idol</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=model" data-category-link="model">
+            <span>モデル</span>
+            <small>model</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=vtuber" data-category-link="vtuber">
+            <span>VTuber/VLiver</span>
+            <small>vtuber</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=liver" data-category-link="liver">
+            <span>ライバー</span>
+            <small>liver</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=voice" data-category-link="voice">
+            <span>声優</span>
+            <small>voice</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=actor" data-category-link="actor">
+            <span>俳優・女優</span>
+            <small>actor</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=movie" data-category-link="movie">
+            <span>映画・舞台</span>
+            <small>movie</small>
+          </a>
+        </li>
+        <li>
+          <a
+            href="audition.html?category=influencer"
+            data-category-link="influencer"
+          >
+            <span>インフルエンサー</span>
+            <small>influencer</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=talents" data-category-link="talents">
+            <span>タレント</span>
+            <small>talents</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=music" data-category-link="music">
+            <span>音楽</span>
+            <small>music</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=work" data-category-link="work">
+            <span>案件</span>
+            <small>work</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=media" data-category-link="media">
+            <span>メディア</span>
+            <small>media</small>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- パンくず -->
+    <nav class="bl-breadcrumb bl-wrap" aria-label="パンくず">
+      <a href="index.html">TOP</a>
+      <span aria-hidden="true"> / </span>
+      <span aria-current="page">お役立ちBlog</span>
+    </nav>
+
+    <!-- メインビジュアル -->
+    <section class="bl-hero" aria-labelledby="blog-title">
+      <div class="bl-wrap">
+        <p class="bl-eyebrow">STAGE NOTE JOURNAL</p>
+        <h1 id="blog-title">お役立ちBlog</h1>
+
+        <p class="bl-hero-copy">
+          はじめての一歩に、<br>
+          ちょっと役立つ読みもの。
+        </p>
+
+        <p>
+          応募の準備から、自分らしい発信まで。<br>
+          あなたの「やってみたい」を応援するヒントを集めました。
+        </p>
+
+        <a class="bl-hero-link" href="#articles">記事を探す ↓</a>
+      </div>
+    </section>
+
+    <div class="bl-wrap">
+      <!-- おすすめの記事 -->
+      <section class="bl-section" aria-labelledby="pickup-title">
+        <div class="bl-heading">
+          <p>PICK UP</p>
+          <h2 id="pickup-title">おすすめの記事</h2>
+        </div>
+
+        <ul class="bl-pick-list">
+          <li>
+            <a class="bl-pick-card" href="#article-1">
+              <div class="bl-visual bl-tone-0" aria-hidden="true">
+                <span>STAGE NOTE / 応募準備</span>
+                <strong>FIRST STEP</strong>
+                <small>はじめての挑戦に、小さなヒント。</small>
+              </div>
+
+              <div class="bl-card-body">
+                <span class="bl-tag">応募準備</span>
+                <h3>初めてのオーディション。応募前に整理したいこと</h3>
+                <span class="bl-read">記事を読む →</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a class="bl-pick-card" href="#article-2">
+              <div class="bl-visual bl-tone-1" aria-hidden="true">
+                <span>STAGE NOTE / 自己PR</span>
+                <strong>MY STORY</strong>
+                <small>はじめての挑戦に、小さなヒント。</small>
+              </div>
+
+              <div class="bl-card-body">
+                <span class="bl-tag">自己PR</span>
+                <h3>自己PRを、自分の言葉で伝えるために</h3>
+                <span class="bl-read">記事を読む →</span>
+              </div>
+            </a>
+          </li>
+
+          <li>
+            <a class="bl-pick-card" href="#article-3">
+              <div class="bl-visual bl-tone-2" aria-hidden="true">
+                <span>STAGE NOTE / ライブ配信</span>
+                <strong>HELLO LIVE</strong>
+                <small>はじめての挑戦に、小さなヒント。</small>
+              </div>
+
+              <div class="bl-card-body">
+                <span class="bl-tag">ライブ配信</span>
+                <h3>初めての配信に向けた、小さな準備</h3>
+                <span class="bl-read">記事を読む →</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- すべての記事 -->
+      <section
+        class="bl-section"
+        id="articles"
+        aria-labelledby="articles-title"
+      >
+        <div class="bl-heading">
+          <p>ARTICLES</p>
+          <h2 id="articles-title">すべての記事</h2>
+        </div>
+
+        <div
+          class="bl-filters"
+          role="group"
+          aria-label="記事カテゴリー"
+          hidden
+        >
+          <button type="button" data-filter="all" aria-pressed="true">
+            すべて
+          </button>
+          <button type="button" data-filter="prepare" aria-pressed="false">
+            応募準備
+          </button>
+          <button type="button" data-filter="profile" aria-pressed="false">
+            自己PR
+          </button>
+          <button type="button" data-filter="live" aria-pressed="false">
+            ライブ配信
+          </button>
+          <button type="button" data-filter="sns" aria-pressed="false">
+            SNS発信
+          </button>
+        </div>
+
+        <p
+          id="bl-count"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          全9件の記事
+        </p>
+
+        <ul class="bl-grid">
+          <!-- 記事1 -->
+          <li class="bl-card" data-topic="prepare" id="article-1">
+            <article>
+              <div class="bl-visual bl-tone-0" aria-hidden="true">
+                <span>STAGE NOTE / 応募準備</span>
+                <strong>FIRST STEP</strong>
+                <small>はじめての挑戦に、小さなヒント。</small>
+              </div>
+
+              <div class="bl-card-body">
+                <p class="bl-meta">
+                  <span class="bl-tag">応募準備</span>
+                  <time datetime="2026-09-30">2026.09.30</time>
+                </p>
+
+                <h3>初めてのオーディション。応募前に整理したいこと</h3>
+                <p>やりたいことを書き出して、自分に合う募集を探そう。</p>
+
+                <details>
+                  <summary>記事を読む</summary>
+                  <div class="bl-article-text">
+                    <p>
+                      まずは興味のある活動と、参加できる曜日・場所を書き出しましょう。
+                      募集要項の応募条件、提出物、締切を確認し、準備する順番を決めます。
+                      わからない点は、募集元の案内を確認してから応募しましょう。
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </li>
+
+          <!-- 記事2 -->
+          <li class="bl-card" data-topic="profile" id="article-2">
+            <article>
+              <div class="bl-visual bl-tone-1" aria-hidden="true">
+                <span>STAGE NOTE / 自己PR</span>
+                <strong>MY STORY</strong>
+                <small>はじめての挑戦に、小さなヒント。</small>
+              </div>
+
+              <div class="bl-card-body">
+                <p class="bl-meta">
+                  <span class="bl-tag">自己PR</span>
+                  <time datetime="2026-09-29">2026.09.29</time>
+                </p>
+
+                <h3>自己PRを、自分の言葉で伝えるために</h3>
+                <p>特別な実績がなくても、経験から自分らしさを見つけられます。</p>
+
+                <details>
+                  <summary>記事を読む</summary>
+                  <div class="bl-article-text">
+                    <p>
+                      続けてきたこと、工夫したこと、誰かに喜んでもらえたことを一つ選びます。
+                      「何をしたか」「どんな工夫をしたか」「これからどう活かしたいか」の順で書くと、
+                      話の流れを整理できます。
+                      声に出して読み、言いにくい表現は普段の言葉に直しましょう。
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </li>
+
+          <!-- 記事3 -->
+          <li class="bl-card" data-topic="live" id="article-3">
+            <article>
+              <div class="bl-visual bl-tone-2" aria-hidden="true">
+                <span>STAGE NOTE / ライブ配信</span>
+                <strong>HELLO LIVE</strong>
+                <small>はじめての挑戦に、小さなヒント。</small>
+              </div>
+
+              <div class="bl-card-body">
+                <p class="bl-meta">
+                  <span class="bl-tag">ライブ配信</span>
+                  <time datetime="2026-09-28">2026.09.28</time>
+                </p>
+
+                <h3>初めての配信に向けた、小さな準備</h3>
+                <p>話すテーマと配信環境を、無理のない範囲で整えよう。</p>
+
+                <details>
+                  <summary>記事を読む</summary>
+                  <div class="bl-article-text">
+                    <p>
+                      最初に話すテーマを一つ決め、あいさつと締めくくりをメモしておきます。
+                      事前に録音して声の聞こえ方を確かめ、
+                      背景に住所や個人情報が映っていないかも確認しましょう。
+                      終了後は、話しやすかった内容を次回のメモに残します。
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </li>
+
+          <!-- 記事4 -->
+          <li class="bl-card" data-topic="prepare" id="article-4">
+            <article>
+              <div class="bl-visual bl-tone-0" aria-hidden="true">
+                <span>STAGE NOTE / 応募準備</span>
+                <strong>CHECK LIST</strong>
+                <small>はじめての挑戦に、小さなヒント。</small>
+              </div>
+
+              <div class="bl-card-body">
+                <p class="bl-meta">
+                  <span class="bl-tag">応募準備</span>
+                  <time datetime="2026-09-27">2026.09.27</time>
+                </p>
+
+                <h3>応募書類を送る前のチェックリスト</h3>
+                <p>提出形式や連絡先を、最後にもう一度確認。</p>
+
+                <details>
+                  <summary>記事を読む</summary>
+                  <div class="bl-article-text">
+                    <p>
+                      氏名と連絡先の入力、指定されたファイル形式、写真の枚数、添付漏れを確認します。
+                      提出する内容を保存しておくと、面接前に振り返れます。
+                      送信後は受付案内の有無と、今後の連絡方法を確認しましょう。
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </li>
+
+          <!-- 記事5 -->
+          <li class="bl-card" data-topic="profile" id="article-5">
+            <article>
+              <div class="bl-visual bl-tone-1" aria-hidden="true">
+                <span>STAGE NOTE / 自己PR</span>
+                <strong>PHOTO NOTE</strong>
+                <small>はじめての挑戦に、小さなヒント。</small>
+              </div>
+
+              <div class="bl-card-body">
+                <p class="bl-meta">
+                  <span class="bl-tag">自己PR</span>
+                  <time datetime="2026-09-26">2026.09.26</time>
+                </p>
+
+                <h3>プロフィール写真で意識したい基本</h3>
+                <p>自分の雰囲気が伝わる、シンプルな一枚に。</p>
+
+                <details>
+                  <summary>記事を読む</summary>
+                  <div class="bl-article-text">
+                    <p>
+                      まず募集元が指定する撮影条件を確認します。
+                      顔に影がかかりにくい場所を選び、背景や服装をすっきり整えましょう。
+                      加工に頼るより、ピントや明るさ、構図を見直すと、
+                      今の自分が伝わりやすくなります。
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </li>
+
+          <!-- 記事6 -->
+          <li class="bl-card" data-topic="sns" id="article-6">
+            <article>
+              <div class="bl-visual bl-tone-2" aria-hidden="true">
+                <span>STAGE NOTE / SNS発信</span>
+                <strong>YOUR VOICE</strong>
+                <small>はじめての挑戦に、小さなヒント。</small>
+              </div>
+
+              <div class="bl-card-body">
+                <p class="bl-meta">
+                  <span class="bl-tag">SNS発信</span>
+                  <time datetime="2026-09-25">2026.09.25</time>
+                </p>
+
+                <h3>発信するテーマを見つけるノート術</h3>
+                <p>好きなことを言葉にするところから始めよう。</p>
+
+                <details>
+                  <summary>記事を読む</summary>
+                  <div class="bl-article-text">
+                    <p>
+                      好きなこと、最近学んだこと、誰かに紹介したいことを三つずつ書きます。
+                      その中から続けて話せそうなテーマを選び、投稿の下書きを作ります。
+                      公開前には、写真や文章を掲載してよいか、
+                      個人情報が含まれていないかを確認しましょう。
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </li>
+
+          <!-- 記事7 -->
+          <li class="bl-card" data-topic="prepare" id="article-7">
+            <article>
+              <div class="bl-visual bl-tone-0" aria-hidden="true">
+                <span>STAGE NOTE / 応募準備</span>
+                <strong>BE READY</strong>
+                <small>はじめての挑戦に、小さなヒント。</small>
+              </div>
+
+              <div class="bl-card-body">
+                <p class="bl-meta">
+                  <span class="bl-tag">応募準備</span>
+                  <time datetime="2026-09-24">2026.09.24</time>
+                </p>
+
+                <h3>オーディション前日の持ち物と予定</h3>
+                <p>当日に慌てないための準備を、ひとつずつ。</p>
+
+                <details>
+                  <summary>記事を読む</summary>
+                  <div class="bl-article-text">
+                    <p>
+                      案内メールを読み返し、集合場所、時刻、持ち物を確認します。
+                      移動経路を調べ、提出したプロフィールにも目を通しておきましょう。
+                      指定がある持ち物はまとめて、朝に確認できる場所に置きます。
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </li>
+
+          <!-- 記事8 -->
+          <li class="bl-card" data-topic="live" id="article-8">
+            <article>
+              <div class="bl-visual bl-tone-1" aria-hidden="true">
+                <span>STAGE NOTE / ライブ配信</span>
+                <strong>TALK NOTE</strong>
+                <small>はじめての挑戦に、小さなヒント。</small>
+              </div>
+
+              <div class="bl-card-body">
+                <p class="bl-meta">
+                  <span class="bl-tag">ライブ配信</span>
+                  <time datetime="2026-09-23">2026.09.23</time>
+                </p>
+
+                <h3>話すことが浮かばないときのテーマ集</h3>
+                <p>日常の小さな出来事も、会話のきっかけになります。</p>
+
+                <details>
+                  <summary>記事を読む</summary>
+                  <div class="bl-article-text">
+                    <p>
+                      最近気になったもの、練習していること、これから挑戦したいことをメモします。
+                      一つの話題に「きっかけ」「感想」「次にしたいこと」を添えると、
+                      話を広げやすくなります。
+                      第三者のプライバシーに関わる話題は避けましょう。
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </li>
+
+          <!-- 記事9 -->
+          <li class="bl-card" data-topic="sns" id="article-9">
+            <article>
+              <div class="bl-visual bl-tone-2" aria-hidden="true">
+                <span>STAGE NOTE / SNS発信</span>
+                <strong>MY PACE</strong>
+                <small>はじめての挑戦に、小さなヒント。</small>
+              </div>
+
+              <div class="bl-card-body">
+                <p class="bl-meta">
+                  <span class="bl-tag">SNS発信</span>
+                  <time datetime="2026-09-22">2026.09.22</time>
+                </p>
+
+                <h3>発信を続ける、自分に合ったペース</h3>
+                <p>無理のない頻度から、少しずつ習慣に。</p>
+
+                <details>
+                  <summary>記事を読む</summary>
+                  <div class="bl-article-text">
+                    <p>
+                      撮影や文章作りに使える時間を考え、続けられそうな頻度を決めます。
+                      アイデアが浮かんだときにメモを残しておくと、投稿前の負担を減らせます。
+                      反応の数字だけでなく、自分が楽しんで取り組めたかも振り返りましょう。
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <button class="bl-more" type="button" hidden>
+          もっと見る ＋
+        </button>
+      </section>
+
+      <!-- オーディション一覧への案内 -->
+      <aside class="bl-cta">
+        <div>
+          <p>準備ができたら、次の一歩へ。</p>
+          <h2>あなたに合う募集を探してみよう。</h2>
+        </div>
+
+        <a class="bl-button" href="audition.html">
+          オーディション一覧へ →
+        </a>
+      </aside>
+    </div>
+  </main>
+
+  <!-- 共通フッター -->
+  <footer class="site-footer">
+    <div class="site-footer__main">
+      <a class="site-footer__logo" href="index.html">STAGE NOTE</a>
+
+      <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+        <div class="site-footer__group">
+          <h2>AUDITION</h2>
+          <ul>
+            <li><a href="audition.html">オーディション一覧</a></li>
+            <li><a href="pick-up.html">注目のオーディション</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__group">
+          <h2>GUIDE</h2>
+          <ul>
+            <li><a href="blog.html">お役立ちBlog</a></li>
+            <li><a href="search.html">事務所を探す</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__group">
+          <h2>ABOUT</h2>
+          <ul>
+            <li><a href="index.html#about-site">このサイトについて</a></li>
+            <li><a href="index.html#first-guide">初めての方へ</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <p class="site-footer__note">
+      ポートフォリオ用の架空サイトです。応募・掲載依頼は受け付けていません。
+    </p>
+
+    <p class="site-footer__copyright">
+      <small>© STAGE NOTE / Portfolio project</small>
+    </p>
+  </footer>
+
+  <!-- jQuery → blog.js の順番で読み込み -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/blog.js"></script>
+</body>
+</html>

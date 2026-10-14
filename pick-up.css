@@ -1,0 +1,706 @@
+@charset "UTF-8";
+
+.pickup-page {
+    margin: 0;
+    background: #fff;
+    color: #333;
+    font-family:
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        Meiryo,
+        sans-serif;
+    line-height: 1.7;
+}
+
+.pickup-page *,
+.pickup-page *::before,
+.pickup-page *::after {
+    box-sizing: border-box;
+}
+
+.pickup-page [hidden] {
+    display: none !important;
+}
+
+.pickup-page button {
+    font: inherit;
+}
+
+.pickup-page a:focus-visible,
+.pickup-page button:focus-visible {
+    outline: 3px solid #7b42ba;
+    outline-offset: 4px;
+}
+
+.pu-skip {
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 100;
+    padding: 12px 20px;
+    transform: translateY(-180%);
+    background: #fff;
+    color: #7b42ba;
+}
+
+.pu-skip:focus {
+    transform: translateY(0);
+}
+
+/* ヘッダー */
+.pu-header {
+    background: #fff;
+    border-bottom: 1px solid #e5e1e9;
+}
+
+.pu-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    width: 92%;
+    max-width: 1440px;
+    min-height: 110px;
+    margin: 0 auto;
+}
+
+.pu-logo {
+    flex-shrink: 0;
+    color: #7b42ba;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-decoration: none;
+}
+
+.pu-logo span {
+    display: block;
+    margin-top: 10px;
+    color: #777;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+}
+
+.pu-menu {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.pu-menu a {
+    color: #555;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.pu-menu a:hover {
+    color: #7b42ba;
+}
+
+.pu-menu .pu-menu__cta {
+    padding: 15px 20px;
+    border-radius: 6px;
+    background: #7b42ba;
+    color: #fff;
+}
+
+.pu-menu-button {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid #e5e1e9;
+    border-radius: 6px;
+    background: #fff;
+    color: #7b42ba;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ページ全体 */
+.pu-main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pu-breadcrumb {
+    margin-top: 24px;
+    font-size: 12px;
+}
+
+.pu-breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.pu-breadcrumb li+li::before {
+    margin-right: 12px;
+    color: #aaa;
+    content: "/";
+}
+
+.pu-breadcrumb a {
+    color: #777;
+    text-decoration: none;
+}
+
+.pu-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.pu-intro {
+    padding: 64px 0 68px;
+    text-align: center;
+}
+
+.pu-eyebrow {
+    margin: 0 0 12px;
+    color: #7b42ba;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+.pu-intro h1 {
+    margin: 0;
+    color: #7b42ba;
+    font-size: clamp(40px, 6vw, 64px);
+    letter-spacing: 0.08em;
+    line-height: 1.2;
+}
+
+.pu-intro h1 span {
+    display: block;
+    margin-top: 16px;
+    color: #333;
+    font-size: 20px;
+    letter-spacing: 0.04em;
+}
+
+.pu-intro__text {
+    margin: 24px 0 0;
+    color: #777;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* 一覧見出し・絞り込み */
+.pu-section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.pu-section-heading .pu-eyebrow {
+    margin-bottom: 8px;
+}
+
+.pu-section-heading h2 {
+    margin: 0;
+    font-size: 23px;
+}
+
+.pu-count {
+    flex-shrink: 0;
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+.pu-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.pu-filters button {
+    min-height: 44px;
+    padding: 9px 22px;
+    border: 1px solid #e5e1e9;
+    border-radius: 999px;
+    background: #fff;
+    color: #666;
+    font-size: 13px;
+    cursor: pointer;
+    transition:
+        background-color 0.2s,
+        color 0.2s,
+        border-color 0.2s;
+}
+
+.pu-filters button:hover {
+    border-color: #7b42ba;
+    color: #7b42ba;
+}
+
+.pu-filters button[aria-pressed="true"] {
+    border-color: #7b42ba;
+    background: #7b42ba;
+    color: #fff;
+}
+
+/* 募集カード */
+.pu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 24px;
+}
+
+.pu-card {
+    min-width: 0;
+}
+
+.pu-card__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #e5e1e9;
+    border-radius: 10px;
+    background: #fff;
+    color: inherit;
+    text-decoration: none;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s;
+}
+
+.pu-card__link:hover {
+    transform: translateY(-4px);
+    border-color: #cbb6df;
+    box-shadow: 0 10px 28px rgb(67 40 89 / 8%);
+}
+
+.pu-card__visual {
+    position: relative;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    padding: 35px 16px 20px;
+}
+
+.pu-visual--music {
+    background: linear-gradient(135deg, #f0eaf8, #d9cce9);
+    color: #625176;
+}
+
+.pu-visual--model {
+    background: linear-gradient(135deg, #fcf0ef, #ead5d8);
+    color: #825b64;
+}
+
+.pu-visual--voice {
+    background: linear-gradient(135deg, #edf5fc, #cfdfed);
+    color: #47667d;
+}
+
+.pu-visual--idol {
+    background: linear-gradient(135deg, #fff0f6, #eed0e3);
+    color: #885c7b;
+}
+
+.pu-visual--actor {
+    background: linear-gradient(135deg, #f6f1e8, #e7d9c2);
+    color: #776449;
+}
+
+.pu-visual--vtuber {
+    background: linear-gradient(135deg, #e9f9f4, #cce8e1);
+    color: #42766b;
+}
+
+.pu-card__badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 1;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: #7b42ba;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.pu-card__visual-text {
+    text-align: center;
+}
+
+.pu-card__visual-text span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.05em;
+}
+
+.pu-card__visual-text strong {
+    display: block;
+    margin: 10px 0;
+    font-size: clamp(22px, 2.3vw, 32px);
+    line-height: 1.2;
+    letter-spacing: 0.025em;
+}
+
+/* 画像に差し替えた場合 */
+.pu-card__visual:has(img) {
+    padding: 0;
+}
+
+.pu-card__visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pu-card__body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 22px;
+}
+
+.pu-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.pu-tag {
+    padding: 3px 9px;
+    border-radius: 4px;
+    background: #f3edf9;
+    color: #7b42ba;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.pu-tag--beginner {
+    background: #f5f5f5;
+    color: #666;
+}
+
+.pu-card h3 {
+    margin: 0 0 12px;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.pu-card__description {
+    margin: 0 0 20px;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.9;
+}
+
+.pu-card__meta {
+    display: grid;
+    gap: 8px;
+    margin: auto 0 0;
+    padding-top: 16px;
+    border-top: 1px solid #eee;
+    font-size: 11px;
+}
+
+.pu-card__meta div {
+    display: grid;
+    grid-template-columns: 78px minmax(0, 1fr);
+    gap: 8px;
+}
+
+.pu-card__meta dt {
+    color: #888;
+}
+
+.pu-card__meta dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.pu-card__more {
+    align-self: flex-end;
+    margin-top: 18px;
+    color: #7b42ba;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pu-empty {
+    margin: 0;
+    padding: 48px 20px;
+    border-radius: 8px;
+    background: #faf9fc;
+    color: #777;
+    text-align: center;
+}
+
+/* 下部の案内 */
+.pu-guide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin-top: 64px;
+    padding: 36px;
+    border: 1px solid #e8def1;
+    border-radius: 10px;
+    background: #faf7fd;
+}
+
+.pu-guide h2 {
+    margin: 0 0 12px;
+    font-size: 21px;
+}
+
+.pu-guide>div>p:last-child {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+.pu-button {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 24px;
+    border: 1px solid #7b42ba;
+    border-radius: 6px;
+    background: #7b42ba;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+}
+
+.pu-button:hover {
+    background: #64339b;
+}
+
+.pu-button--outline {
+    background: #fff;
+    color: #7b42ba;
+}
+
+.pu-button--outline:hover {
+    background: #f6f0fb;
+}
+
+.pu-all-link {
+    margin-top: 32px;
+    text-align: center;
+}
+
+/* 共通footer.cssの適用対象に、このページを補足 */
+.pickup-page .site-footer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto 0;
+    padding: 40px 5% 24px;
+    border-top: 1px solid #e5e1e9;
+    background: #fff;
+    color: #333;
+    font-family: inherit;
+    line-height: 1.7;
+}
+
+.pickup-page .site-footer__note {
+    margin: 0 0 12px;
+    color: #777;
+    font-size: 10px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.pickup-page .site-footer__copyright {
+    margin: 0;
+    color: #777;
+    font-size: 10px;
+    text-align: center;
+}
+
+/* タブレット */
+@media (max-width: 1024px) {
+    .pu-header__inner {
+        flex-wrap: wrap;
+        gap: 0;
+        min-height: 90px;
+        padding: 20px 0;
+    }
+
+    .pu-logo {
+        font-size: 24px;
+    }
+
+    .pickup-page.has-js .pu-menu-button {
+        display: block;
+    }
+
+    .pu-menu {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        margin-top: 20px;
+        border-top: 1px solid #eee;
+    }
+
+    .pickup-page.has-js .pu-menu {
+        display: none;
+    }
+
+    .pickup-page.has-js .pu-menu.is-active {
+        display: flex;
+    }
+
+    .pu-menu a {
+        padding: 14px 8px;
+    }
+
+    .pu-menu .pu-menu__cta {
+        margin-top: 8px;
+        text-align: center;
+    }
+
+    .pu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pu-card__visual-text strong {
+        font-size: 30px;
+    }
+
+    .pu-guide {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+/* スマートフォン */
+@media (max-width: 600px) {
+    .pu-main {
+        width: calc(100% - 32px);
+    }
+
+    .pu-logo {
+        font-size: 22px;
+    }
+
+    .pu-logo span {
+        font-size: 10px;
+    }
+
+    .pu-intro {
+        padding: 44px 0;
+    }
+
+    .pu-intro h1 span {
+        font-size: 17px;
+    }
+
+    .pu-intro__text {
+        font-size: 12px;
+    }
+
+    .pu-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .pu-section-heading h2 {
+        font-size: 20px;
+    }
+
+    .pu-filters {
+        gap: 8px;
+        margin-bottom: 24px;
+    }
+
+    .pu-filters button {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .pu-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 24px;
+    }
+
+    .pu-card__visual-text strong {
+        font-size: 32px;
+    }
+
+    .pu-card__body {
+        padding: 20px;
+    }
+
+    .pu-guide {
+        margin-top: 44px;
+        padding: 26px 22px;
+    }
+
+    .pu-guide h2 {
+        font-size: 18px;
+    }
+
+    .pu-guide .pu-button {
+        width: 100%;
+    }
+
+    .pickup-page .site-footer {
+        margin-top: 60px;
+        padding: 28px 0 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pu-card__link,
+    .pu-filters button {
+        transition: none;
+    }
+
+    .pu-card__link:hover {
+        transform: none;
+    }
+}
+
+/* PCではハンバーガーメニューを非表示 */
+.pickup-page .pu-menu-button {
+  display: none;
+}
+
+/* タブレット・スマホではヘッダー右側に表示 */
+@media (max-width: 1024px) {
+  .pickup-page .pu-header__inner {
+    justify-content: space-between;
+  }
+
+  .pickup-page.has-js .pu-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+
+  .pickup-page .pu-menu {
+    flex-basis: 100%;
+  }
+}

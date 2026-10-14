@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="STAGE NOTEのオーディション詳細。掲載内容はポートフォリオ用の架空の募集です。"
+  >
+  <title>オーディション詳細｜STAGE NOTE</title>
+
+  <link rel="stylesheet" href="application.css">
+  <link rel="stylesheet" href="category.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+
+<body class="detail-page">
+  <a class="dt-skip" href="#main">本文へ移動</a>
+
+  <header class="dt-header">
+    <div class="dt-header-inner">
+      <a class="dt-logo" href="index.html">
+        STAGE NOTE
+        <small>はじめての挑戦を、ここから。</small>
+      </a>
+
+      <button
+        class="dt-menu-button"
+        type="button"
+        aria-controls="dt-navigation"
+        aria-expanded="false"
+        hidden
+      >
+        メニュー
+      </button>
+
+      <nav
+        id="dt-navigation"
+        class="dt-navigation"
+        aria-label="メインナビゲーション"
+      >
+        <a href="audition.html">オーディション一覧</a>
+        <a href="blog.html">お役立ちBlog</a>
+        <a href="search.html">事務所を探す</a>
+        <a href="index.html#first-guide">初めての方へ</a>
+        <a class="dt-button" href="audition.html">
+          自分に合う募集を探す →
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 共通カテゴリー -->
+  <nav class="site-category" aria-label="カテゴリから探す">
+    <p class="site-category__label">カテゴリ：</p>
+    <div class="site-category__scroll">
+      <ul class="site-category__list">
+        <li>
+          <a href="audition.html?category=idol">
+            <span>アイドル</span><small>idol</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=model">
+            <span>モデル</span><small>model</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=vtuber">
+            <span>VTuber/VLiver</span><small>vtuber</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=liver">
+            <span>ライバー</span><small>liver</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=voice">
+            <span>声優</span><small>voice</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=actor">
+            <span>俳優・女優</span><small>actor</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=movie">
+            <span>映画・舞台</span><small>movie</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=influencer">
+            <span>インフルエンサー</span><small>influencer</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=talents">
+            <span>タレント</span><small>talents</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=music">
+            <span>音楽</span><small>music</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=work">
+            <span>案件</span><small>work</small>
+          </a>
+        </li>
+        <li>
+          <a href="audition.html?category=media">
+            <span>メディア</span><small>media</small>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main id="main" class="dt-wrap">
+    <!-- JSが実行されると非表示になります -->
+    <p id="dt-loading" class="dt-message" role="status">
+      募集内容を読み込んでいます。
+      表示されない場合はJavaScriptの読み込みを確認してください。
+    </p>
+
+    <noscript>
+      <p class="dt-message">
+        詳細の表示にはJavaScriptが必要です。
+        <a href="audition.html">オーディション一覧へ戻る</a>
+      </p>
+    </noscript>
+
+    <!-- IDが存在しない場合 -->
+    <section id="dt-error" class="dt-error" hidden>
+      <p class="dt-eyebrow">NOT FOUND</p>
+      <h1>募集が見つかりませんでした。</h1>
+      <p>オーディション一覧から、募集を選び直してください。</p>
+      <a class="dt-button" href="audition.html">
+        オーディション一覧へ →
+      </a>
+    </section>
+
+    <!-- 募集詳細 -->
+    <div id="dt-content" hidden>
+      <nav class="dt-breadcrumb" aria-label="パンくず">
+        <ol>
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="audition.html">オーディション一覧</a></li>
+          <li>
+            <a id="dt-category-link" href="audition.html"></a>
+          </li>
+          <li id="dt-breadcrumb-title" aria-current="page"></li>
+        </ol>
+      </nav>
+
+      <p class="dt-notice">
+        ポートフォリオ用の架空の募集です。実際の応募は受け付けていません。
+      </p>
+
+      <div class="dt-layout">
+        <article class="dt-article">
+          <header class="dt-article-header">
+            <div class="dt-tags">
+              <span id="dt-category" class="dt-tag"></span>
+              <span id="dt-experience" class="dt-tag dt-tag-light"></span>
+            </div>
+
+            <h1 id="dt-title"></h1>
+            <p id="dt-description" class="dt-intro"></p>
+
+            <div class="dt-visual" id="dt-visual" aria-hidden="true">
+              <span id="dt-visual-category"></span>
+              <strong id="dt-visual-title"></strong>
+              <small>はじめての挑戦を、ここから。</small>
+            </div>
+          </header>
+
+          <!-- 募集のポイント -->
+          <section class="dt-point" aria-labelledby="point-title">
+            <p class="dt-eyebrow">POINT</p>
+            <h2 id="point-title">この募集のポイント</h2>
+            <ul id="dt-points"></ul>
+          </section>
+
+          <!-- ページ内リンク -->
+          <nav class="dt-local-nav" aria-label="募集詳細の各項目へ">
+            <a href="#overview">募集概要</a>
+            <a href="#requirements">応募条件</a>
+            <a href="#selection">選考の流れ</a>
+            <a href="#after-selection">合格後の活動</a>
+          </nav>
+
+          <section class="dt-section" id="overview">
+            <p class="dt-eyebrow">ABOUT</p>
+            <h2>募集概要</h2>
+            <p id="dt-overview" class="dt-paragraph"></p>
+          </section>
+
+          <section class="dt-section" id="requirements">
+            <p class="dt-eyebrow">REQUIREMENTS</p>
+            <h2>応募条件・募集要項</h2>
+
+            <dl class="dt-specs">
+              <div>
+                <dt>応募資格</dt>
+                <dd id="dt-qualification"></dd>
+              </div>
+              <div>
+                <dt>活動エリア</dt>
+                <dd id="dt-area"></dd>
+              </div>
+              <div>
+                <dt>提出物</dt>
+                <dd id="dt-materials"></dd>
+              </div>
+              <div>
+                <dt>応募方法</dt>
+                <dd>Web応募を想定したサンプルです。</dd>
+              </div>
+              <div>
+                <dt>選考参加費</dt>
+                <dd id="dt-fee"></dd>
+              </div>
+              <div>
+                <dt>活動時の費用・報酬</dt>
+                <dd id="dt-activity-terms"></dd>
+              </div>
+              <div>
+                <dt>応募締切</dt>
+                <dd><time id="dt-deadline"></time></dd>
+              </div>
+              <div>
+                <dt>主催</dt>
+                <dd id="dt-organizer"></dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="dt-section" id="selection">
+            <p class="dt-eyebrow">SELECTION</p>
+            <h2>選考の流れ</h2>
+            <ol class="dt-steps" id="dt-steps"></ol>
+          </section>
+
+          <section class="dt-section" id="after-selection">
+            <p class="dt-eyebrow">NEXT STEP</p>
+            <h2>合格後の活動</h2>
+            <p id="dt-after" class="dt-paragraph"></p>
+          </section>
+
+          <section class="dt-section">
+            <p class="dt-eyebrow">FAQ</p>
+            <h2>よくある質問</h2>
+            <div class="dt-faq" id="dt-faq"></div>
+          </section>
+
+          <div class="dt-demo-note">
+            <h2>この募集について</h2>
+            <p>
+              掲載内容はサイトの機能・デザインを紹介するためのサンプルです。
+              応募フォームや個人情報の送信機能は設置していません。
+            </p>
+            <a class="dt-button" href="audition.html">
+              ほかのオーディションを見る →
+            </a>
+          </div>
+        </article>
+
+        <!-- PCでは右側、スマホでは本文の下に表示 -->
+        <aside class="dt-sidebar" aria-label="募集情報のまとめ">
+          <div class="dt-summary">
+            <p class="dt-eyebrow">AUDITION INFO</p>
+            <h2>募集情報</h2>
+
+            <dl>
+              <div>
+                <dt>カテゴリー</dt>
+                <dd id="dt-summary-category"></dd>
+              </div>
+              <div>
+                <dt>活動エリア</dt>
+                <dd id="dt-summary-area"></dd>
+              </div>
+              <div>
+                <dt>締切</dt>
+                <dd id="dt-summary-deadline"></dd>
+              </div>
+            </dl>
+
+            <a class="dt-button" href="#requirements">
+              募集要項を確認する ↓
+            </a>
+            <p class="dt-summary-note">架空の募集・応募受付なし</p>
+          </div>
+
+          <a class="dt-blog-link" href="blog.html">
+            <span>はじめての応募に</span>
+            <strong>準備のヒントを読む →</strong>
+          </a>
+        </aside>
+      </div>
+
+      <section class="dt-related" aria-labelledby="related-title">
+        <p class="dt-eyebrow">MORE AUDITIONS</p>
+        <h2 id="related-title">ほかの募集も見てみる</h2>
+        <ul id="dt-related-list"></ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__main">
+      <a class="site-footer__logo" href="index.html">STAGE NOTE</a>
+
+      <nav class="site-footer__nav" aria-label="フッターナビゲーション">
+        <div class="site-footer__group">
+          <h2>AUDITION</h2>
+          <ul>
+            <li><a href="audition.html">オーディション一覧</a></li>
+            <li><a href="pick-up.html">注目のオーディション</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__group">
+          <h2>GUIDE</h2>
+          <ul>
+            <li><a href="blog.html">お役立ちBlog</a></li>
+            <li><a href="search.html">事務所を探す</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__group">
+          <h2>ABOUT</h2>
+          <ul>
+            <li><a href="index.html#about-site">このサイトについて</a></li>
+            <li><a href="index.html#first-guide">初めての方へ</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <p class="site-footer__note">
+      ポートフォリオ用の架空サイトです。応募・掲載依頼は受け付けていません。
+    </p>
+    <p class="site-footer__copyright">
+      <small>© STAGE NOTE / Portfolio project</small>
+    </p>
+  </footer>
+
+  <!-- この順番で読み込みます -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/audition-data.js"></script>
+  <script src="js/application.js"></script>
+</body>
+</html>
