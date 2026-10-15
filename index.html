@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="category.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="loading.css">
+    <script src="js/loading.js" defer></script>
 </head>
 
 <body class="home-page">
@@ -280,7 +282,7 @@
                             </a></article>
                         <article class="pick-up-list"><a class="card-link" href="application.html?id=actor">
                                 <div class="img-visual visual-actor"><!-- 写真を用意したら、この内側を img タグに差し替えます。 -->
-                                   <img src="img/短編映画.png" alt="短編映画「はじまりの日」出演者募集">
+                                    <img src="img/短編映画.png" alt="短編映画「はじまりの日」出演者募集">
                                 </div>
                                 <div class="card-info">
                                     <div class="pick-up-categoly">
@@ -458,8 +460,8 @@
                                     </div>
                                 </a></article>
                             <article class="pick-up-list"><a class="card-link" href="application.html?id=vtuber">
-                                    <div class="img-visual visual-vtuber"><!-- 写真を用意したら、この内側を img タグに差し替えます。 -->    
-                                            <img src="img/virtual-streamer.png" alt="バーチャル配信者オーディション">
+                                    <div class="img-visual visual-vtuber"><!-- 写真を用意したら、この内側を img タグに差し替えます。 -->
+                                        <img src="img/virtual-streamer.png" alt="バーチャル配信者オーディション">
                                     </div>
                                     <div class="card-info">
                                         <div class="pick-up-categoly">
@@ -701,5 +703,22 @@
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" defer></script>
     <script src="js/main.js" defer></script>
 </body>
+
+<!-- ローディング演出 -->
+<div class="sn-loading" id="sn-loading" hidden aria-hidden="true">
+    <div class="sn-loading__content">
+        <p class="sn-loading__label">YOUR NEXT STAGE</p>
+
+        <p class="sn-loading__logo">STAGE NOTE</p>
+
+        <p class="sn-loading__message">
+            はじめての挑戦を、ここから。
+        </p>
+
+        <div class="sn-loading__line">
+            <span></span>
+        </div>
+    </div>
+</div>
 
 </html>

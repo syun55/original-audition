@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+/* ローディング全体 */
+.sn-loading {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: #fff;
+    opacity: 1;
+    transition:
+        opacity 0.45s ease,
+        visibility 0.45s ease;
+}
+
+.sn-loading[hidden] {
+    display: none;
+}
+
+.sn-loading,
+.sn-loading * {
+    box-sizing: border-box;
+}
+
+/* 背景に淡い紫の光 */
+.sn-loading::before {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 50% 45%,
+            rgba(123, 66, 186, 0.09),
+            transparent 60%);
+    content: "";
+    pointer-events: none;
+}
+
+.sn-loading__content {
+    position: relative;
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+    font-family:
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
+        sans-serif;
+}
+
+.sn-loading__label {
+    margin: 0 0 18px;
+    color: #94849f;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    animation: sn-loading-reveal 0.6s ease both;
+}
+
+.sn-loading__logo {
+    margin: 0;
+    color: #7b42ba;
+    font-size: clamp(32px, 7vw, 64px);
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    animation: sn-loading-reveal 0.7s ease 0.1s both;
+}
+
+.sn-loading__message {
+    margin: 20px 0 0;
+    color: #777;
+    font-size: clamp(10px, 2.5vw, 13px);
+    line-height: 1.8;
+    letter-spacing: 0.12em;
+    animation: sn-loading-reveal 0.7s ease 0.25s both;
+}
+
+/* 読み込み中を示す光のライン */
+.sn-loading__line {
+    width: 160px;
+    height: 2px;
+    margin: 34px auto 0;
+    overflow: hidden;
+    border-radius: 999px;
+    background: #eee7f5;
+}
+
+.sn-loading__line span {
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg,
+            transparent,
+            #7b42ba,
+            transparent);
+    animation: sn-loading-line 1.3s ease-in-out infinite;
+}
+
+/* 終了 */
+.sn-loading.is-leaving {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes sn-loading-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes sn-loading-line {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(200%);
+    }
+}
+
+/* 動きを減らす設定 */
+@media (prefers-reduced-motion: reduce) {
+    .sn-loading {
+        transition: none;
+    }
+
+    .sn-loading__label,
+    .sn-loading__logo,
+    .sn-loading__message,
+    .sn-loading__line span {
+        animation: none;
+    }
+}
